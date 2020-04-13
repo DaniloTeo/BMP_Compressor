@@ -65,3 +65,8 @@ As técnicas de compressão a serem desenvolvidas são, no mínimo: compressão 
 		fread(&H->Reserved2,sizeof (unsigned short int),1,F); 
 		fread(&H->OffBits,sizeof (unsigned int),1,F);
 	}
+
+
+### Links Úteis:
+ - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/)
+ - [Descrição de arquivos BMP](http://paulbourke.net/dataformats/bmp/)

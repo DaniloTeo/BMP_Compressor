@@ -1,5 +1,11 @@
 # Projeto: Compressão de Imagens
 
+## **TO DO**:
+ - Implementar separação em 8x8;
+ - Implementar DCT / IDCT;
+ - Encapsular melhor cada grupo de funções;
+ - Implementar compressão e afins...
+
 ## Objetivos
 
 O objetivo principal do projeto é colocar em prática conceitos teóricos abordados em sala de aularelacionados   a   técnicas   de   codificação   de   mídias.   Para   isso,   os   grupos   deverão   implementar   algumastécnicas de compressão e descompressão – a saber.

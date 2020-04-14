@@ -6,8 +6,8 @@
  - Encapsular melhor cada grupo de funções;
  - Implementar compressão e afins...
 ## Como Rodar
-make
-./BMP_compressor ./PATH TO THE IMAGE
+	make
+	./BMP_compressor ./PATH TO THE IMAGE
 
 ## Objetivos
 

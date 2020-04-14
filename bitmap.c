@@ -1,34 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include "bitmap.h"
 
-
-// Start of Bitmap Data Structures *******************************************************
-typedef struct { 						/**** BMP file header structure ****/    
-	unsigned short bfType;			/* Magic number for file */ 
-	unsigned int   bfSize;			/* Size of file */ 
-	unsigned short bfReserved1;		/* Reserved */
-	unsigned short bfReserved2;		/* ... */
-	unsigned int   bfOffBits;		/* Offset to bitmap data */
-} BMPFILEHEADER;					/* bfType deve ser = "MB" */
-
-typedef struct{  /**** BMP file info structure ****/
-
-	unsigned int   biSize;			/* Size of info header */
-	int 	 	   biWidth;    		/* Width of image */
-	int   		   biHeight;   		/* Height of image */
-	unsigned short biPlanes;		/* Number of color planes */
-	unsigned short biBitCount;		/* Number of bits per pixel */
-	unsigned int   biCompression;	/* Type of compression to use */
-	unsigned int   biSizeImage;		/* Size of image data */
-	int            biXPelsPerMeter;	/* X pixels per meter */ 
-	int            biYPelsPerMeter;	/* Y pixels per meter */
-	unsigned int   biClrUsed;		/* Number of colors used */
-	unsigned int   biClrImportant;	/* Number of important colors */
-} BMPINFOHEADER;
-// End of Bitmap Data Structures ******************************************************
-
-
-// Start of Bitmap Aux functions ******************************************************
+/*Start of Bitmap Aux functions *******************************************************/
 void leituraFileHeader(FILE *F, BMPFILEHEADER *H){
 	/* F é o arquivo Bitmap que deve ter sido “lido” do disco */
 	fread(&H->bfType,sizeof (unsigned short int),1,F);
@@ -97,9 +71,7 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 	printf("No of Important Colors: %u\n", h->biClrImportant);
 	printf("-----+-----+-----+-----+-----+-----+\n");
 }
-// End of Bitmap Aux functions ******************************************************
-
-
+/*End of Bitmap Aux functions *******************************************************/
 
 void readBMPImage(FILE *f, unsigned char ***B, unsigned char ***G, unsigned char ***R, int lin, int col){
 	int i = 0, j = 0;
@@ -182,43 +154,4 @@ void printUnCharMatriz(unsigned char **m, int lin, int col){
 		}
 		printf("\n");
 	}
-}
-
-
-
-
-
-
-int main(void){
-	// Alocando memoria pra arquivo
-	FILE *f = fopen("./Imagens/3.bmp", "rb");
-	
-	// Leitura e Exibição do File Header
-	BMPFILEHEADER fileHeader;
-	leituraFileHeader(f, &fileHeader);
-	dumpFileHeader(&fileHeader);
-
-	// Leitura e Exibição do infoHeader
-	BMPINFOHEADER infoHeader;
-	leituraInfoHeader(f, &infoHeader);
-	dumpInfoHeader(&infoHeader);
-
-	// Leitura dos componentes B,G,R da imagem
-	unsigned char **B = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
-	unsigned char **G = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
-	unsigned char **R = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
-	readBMPImage(f, &B, &G, &R,infoHeader.biHeight, infoHeader.biWidth);
-
-
-	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
-	
-
-
-	// Liberacao de Memoria
-	liberaMatrizUnChar(R,infoHeader.biHeight);
-	liberaMatrizUnChar(G,infoHeader.biHeight);
-	liberaMatrizUnChar(B,infoHeader.biHeight);
-	fclose(f);
-	
-	return 0;
 }

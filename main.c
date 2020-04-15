@@ -24,11 +24,7 @@ int main(int argc, char *argv[]){
 	unsigned char **R = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	readBMPImage(f, &B, &G, &R,infoHeader.biHeight, infoHeader.biWidth);
 
-	double **DCTB = segmentAndDCTImage(B, infoHeader.biWidth, infoHeader.biHeight);
-	double **DCTG = segmentAndDCTImage(G, infoHeader.biWidth, infoHeader.biHeight);
-	double **DCTR = segmentAndDCTImage(R, infoHeader.biWidth, infoHeader.biHeight);
-	
-	writeBMPFile(DCTB, DCTG, DCTR, &fileHeader, &infoHeader);
+	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
 	
 
 

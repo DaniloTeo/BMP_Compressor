@@ -104,7 +104,7 @@ unsigned char **convertDoubleMatrixToChar(double **image, int width, int height)
 }
 
 unsigned char **IDCTImage(double **image, int width, int height) {
-	int w, h, i, j;
+	int w, h;
 	double **IDCTImage = allocateDoubleMatrix(width, height);
 	for (h = 0; h < height; h+=8) {
 		for (w = 0; w < width; w+=8) {
@@ -116,7 +116,7 @@ unsigned char **IDCTImage(double **image, int width, int height) {
 }
 
 double **DCTImage(unsigned char **image, int width, int height) {
-	int w, h, i, j;
+	int w, h;
 	double **DCTImage = allocateDoubleMatrix(width, height);
 	for (h = 0; h < height; h+=8) {
 		for (w = 0; w < width; w+=8) {

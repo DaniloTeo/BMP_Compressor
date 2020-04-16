@@ -1,6 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <math.h>
 #include "bitmap.h"
+#include "DCT.h"
 
 int main(int argc, char *argv[]){
 	// Alocando memoria pra arquivo
@@ -21,7 +23,6 @@ int main(int argc, char *argv[]){
 	unsigned char **G = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	unsigned char **R = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	readBMPImage(f, &B, &G, &R,infoHeader.biHeight, infoHeader.biWidth);
-
 
 	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
 	

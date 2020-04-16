@@ -97,9 +97,9 @@ void writeBMPFile(unsigned char **B, unsigned char **G, unsigned char **R, BMPFI
 	// Escreve os dados da imagem
 	for(i = 0; i < lin; i++){
 		for(j = 0; j < col; j++){
-			fwrite(&R[i][j], sizeof(unsigned char), 1, out);
-			fwrite(&G[i][j], sizeof(unsigned char), 1, out);
 			fwrite(&B[i][j], sizeof(unsigned char), 1, out);
+			fwrite(&G[i][j], sizeof(unsigned char), 1, out);
+			fwrite(&R[i][j], sizeof(unsigned char), 1, out);
 		}
 	}
 

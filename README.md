@@ -1,19 +1,24 @@
 # Projeto: Compressão de Imagens
 
 ## **TO DO**:
+ - Implementar Quantização/Desquantização;
+ - Implementar vetorização e enconding/decoding(Run-Length ou Diferencial);
+ - Implementar Alg. Compressão/Descompressão(Huffman?);
+
+## **DONE**:
  - Implementar separação em 8x8;
  - Implementar DCT / IDCT;
  - Encapsular melhor cada grupo de funções;
- - Implementar compressão e afins...
+
 ## Como Rodar
 	make
 	./BMP_compressor ./PATH TO THE IMAGE
 
 ## Objetivos
 
-O objetivo principal do projeto é colocar em prática conceitos teóricos abordados em sala de aularelacionados   a   técnicas   de   codificação   de   mídias.   Para   isso,   os   grupos   deverão   implementar   algumastécnicas de compressão e descompressão – a saber.
-Cada grupo deverá desenvolver um compressor para imagens e seu respectivo descompressor. Ocompressor deve aceitar como entrada uma imagem (segundo modelo abaixo). Como saída o compressordeve gerar um arquivo binário que represente a imagem de modo comprimido e a taxa de compressão atingida.
-O descompressor deve receber como entrada  um arquivo binário  armazenado  em disco, o qualdeve   ter   sido   produzido   pelo   correspondente   compressor.   Como   saída,   o   descompressor   produz   umaimagem com qualidade similar à imagem original.
+O objetivo principal do projeto é colocar em prática conceitos teóricos abordados em sala de aula relacionados   a   técnicas   de   codificação   de   mídias.   Para   isso,   os   grupos   deverão   implementar   algumastécnicas de compressão e descompressão – a saber.
+Cada grupo deverá desenvolver um compressor para imagens e seu respectivo descompressor. Ocompressor deve aceitar como entrada uma imagem (segundo modelo abaixo). Como saída o compressor deve gerar um arquivo binário que represente a imagem de modo comprimido e a taxa de compressão atingida.
+O descompressor deve receber como entrada  um arquivo binário  armazenado  em disco, o qual deve   ter   sido   produzido   pelo   correspondente   compressor.   Como   saída,   o   descompressor   produz   uma imagem com qualidade similar à imagem original.
 As técnicas de compressão a serem desenvolvidas são, no mínimo: compressão com perdas com autilização de transformada DCT e compressão sem perdas utilizando codificação diferencial.	
 
 
@@ -79,3 +84,5 @@ As técnicas de compressão a serem desenvolvidas são, no mínimo: compressão 
 ### Links Úteis:
  - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/)
  - [Descrição de arquivos BMP](http://paulbourke.net/dataformats/bmp/)
+ - [Aula com Informações sobre o processo JPEG](https://ae4.tidia-ae.usp.br/access/content/group/d06ef1d7-9569-4321-91f3-7e9a644c6e50/Slides%20das%20Aulas/aula_jpeg.pdf)
+ - [Artigo da Wikipedia sobre JPEG](https://en.wikipedia.org/wiki/JPEG)

@@ -3,6 +3,7 @@
 #include <math.h>
 #include "bitmap.h"
 #include "DCT.h"
+#include "quantization.h"
 
 int main(int argc, char *argv[]){
 	// Alocando memoria pra arquivo
@@ -38,7 +39,6 @@ int main(int argc, char *argv[]){
 	double **RAfterDCT = DCTImage(R, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Image is ready for Quantization...\n");
-
 
 	//Aplicacao da DCT inversa (Essa parte fica no descompressor)
 	printf("Applying IDCT to BGR Components...\n");

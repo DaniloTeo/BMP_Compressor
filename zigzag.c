@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-void down_and_left(int * count, int * i, int * j, double *vet, double img[][8], int limit){
+void down_and_left(int * count, int * i, int * j, double *vet, double **img, int limit){
 	while(*j-1 >= 0 && *i+1 < limit){
 		*j = *j - 1;
 		*i = *i + 1;
@@ -11,7 +11,7 @@ void down_and_left(int * count, int * i, int * j, double *vet, double img[][8], 
 	}
 }
 
-void up_and_right(int * count, int * i, int * j, double *vet, double img[][8], int limit){
+void up_and_right(int * count, int * i, int * j, double *vet, double **img, int limit){
 	while(*j+1 < limit && *i-1 >= 0){
 		*j = *j + 1;
 		*i = *i - 1;
@@ -21,7 +21,7 @@ void up_and_right(int * count, int * i, int * j, double *vet, double img[][8], i
 }
 
 
-double * zigzagwalk(double img[][8], int maxDimension){
+double * zigzagwalk(double **img, int maxDimension){
 	double *vet = (double *) malloc(sizeof(double) * (maxDimension * maxDimension));
 
 	if(vet != NULL){

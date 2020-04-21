@@ -21,7 +21,7 @@ double ** allocateDoubleMatrix(int width, int height) {
 	return mat;
 }
 
-void quantize(double input[][8], double **output, int startWidth, int startHeight ) {
+void quantize(double **input, double **output, int startWidth, int startHeight ) {
 	int i, j;
 	double aux;
 	for (i = startHeight; i < startHeight + 8; i++) {
@@ -31,7 +31,7 @@ void quantize(double input[][8], double **output, int startWidth, int startHeigh
 	}
 }
 
-double **quantizeImage(double image[][8], int width, int height) {
+double **quantizeImage(double **image, int width, int height) {
 	int w, h;
 	double **quantImage = allocateDoubleMatrix(width, height);
 	for (h = 0; h < height; h+=8) {

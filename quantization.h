@@ -3,8 +3,8 @@
 
 double ** allocateDoubleMatrix(int width, int height);
 
-void quantize(double input[][8], double **output, int startWidth, int startHeight );
+void quantize(double **input, double **output, int startWidth, int startHeight );
 
-double **quantizeImage(double image[][8], int width, int height);
+double **quantizeImage(double **image, int width, int height);
 
 #endif

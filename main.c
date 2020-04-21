@@ -38,7 +38,10 @@ int main(int argc, char *argv[]){
 	double **GAfterDCT = DCTImage(G, infoHeader.biWidth, infoHeader.biHeight);
 	double **RAfterDCT = DCTImage(R, infoHeader.biWidth, infoHeader.biHeight);
 
-	printf("Image is ready for Quantization...\n");
+	printf("Applying Quantization...\n");
+	double **BQuantized = quantizeImage(BAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **GQuantized = quantizeImage(GAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **RQuantized = quantizeImage(RAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	//Aplicacao da DCT inversa (Essa parte fica no descompressor)
 	printf("Applying IDCT to BGR Components...\n");
@@ -54,6 +57,10 @@ int main(int argc, char *argv[]){
 
 
 	// Liberacao de Memoria
+
+	freeDoubleMatrix(BQuantized, infoHeader.biHeight);
+	freeDoubleMatrix(GQuantized, infoHeader.biHeight);
+	freeDoubleMatrix(RQuantized, infoHeader.biHeight);
 	freeDoubleMatrix(RAfterDCT, infoHeader.biHeight);
 	freeDoubleMatrix(GAfterDCT, infoHeader.biHeight);
 	freeDoubleMatrix(BAfterDCT, infoHeader.biHeight);

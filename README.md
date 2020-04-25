@@ -14,6 +14,14 @@
 	make
 	./BMP_compressor ./PATH TO THE IMAGE
 
+
+### Links para Algoritmos de Compressão:
+ - [Run-Length Enconding](https://en.wikipedia.org/wiki/Run-length_encoding);
+ - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/);
+ - [Explicação sobre Huffman](https://en.wikipedia.org/wiki/Run-length_encoding);
+ - [Lempel-ziv-Welch](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch#Encoding);
+ 
+
 ## Objetivos
 
 O objetivo principal do projeto é colocar em prática conceitos teóricos abordados em sala de aula relacionados   a   técnicas   de   codificação   de   mídias.   Para   isso,   os   grupos   deverão   implementar   algumastécnicas de compressão e descompressão – a saber.

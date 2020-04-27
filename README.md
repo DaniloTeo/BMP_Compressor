@@ -1,11 +1,15 @@
 # Projeto: Compressão de Imagens
 
 ## **TO DO**:
- - Implementar Quantização/Desquantização;
- - Implementar vetorização e enconding/decoding(Run-Length ou Diferencial);
- - Implementar Alg. Compressão/Descompressão(Huffman?);
+ - Implementar Conversão RGB -> YCbCr
+ - Implementar Desquantização;
+ - Implementar funções de compressão/descompressão Run-Length Enconding (RLE);
+ - Implementar funções Compressão/Descompressão por Huffman;
+ - Implementar funções de comparação dos algoritmos;
 
 ## **DONE**:
+ - Implementar ZigZag Scan;
+ - Implementar Quantização;
  - Implementar separação em 8x8;
  - Implementar DCT / IDCT;
  - Encapsular melhor cada grupo de funções;
@@ -19,7 +23,6 @@
  - [Run-Length Enconding](https://en.wikipedia.org/wiki/Run-length_encoding);
  - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/);
  - [Explicação sobre Huffman](https://en.wikipedia.org/wiki/Run-length_encoding);
- - [Lempel-ziv-Welch](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Welch#Encoding);
  
 
 ## Objetivos
@@ -90,7 +93,7 @@ As técnicas de compressão a serem desenvolvidas são, no mínimo: compressão 
 
 
 ### Links Úteis:
- - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/)
+<!--  - [Compressão de BMP utilizando Huffman](https://www.geeksforgeeks.org/image-compression-using-huffman-coding/) -->
  - [Descrição de arquivos BMP](http://paulbourke.net/dataformats/bmp/)
- - [Aula com Informações sobre o processo JPEG](https://ae4.tidia-ae.usp.br/access/content/group/d06ef1d7-9569-4321-91f3-7e9a644c6e50/Slides%20das%20Aulas/aula_jpeg.pdf)
+ <!-- - [Aula com Informações sobre o processo JPEG](https://ae4.tidia-ae.usp.br/access/content/group/d06ef1d7-9569-4321-91f3-7e9a644c6e50/Slides%20das%20Aulas/aula_jpeg.pdf) -->
  - [Artigo da Wikipedia sobre JPEG](https://en.wikipedia.org/wiki/JPEG)

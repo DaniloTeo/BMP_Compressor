@@ -35,7 +35,7 @@ void freeCharMatrix(unsigned char **mat, int height) {
 	}
 	free(mat);
 }
-void dct(unsigned char **input, double **output, int startWidth, int startHeight ) {
+void dct(/*unsigned char*/double **input, double **output, int startWidth, int startHeight ) {
 	int i, j, k, l;
 	double ci, cj, dct1, sum, cos1, cos2;
 	for (i = startHeight; i < startHeight + 8; i++) {
@@ -103,7 +103,7 @@ unsigned char **convertDoubleMatrixToChar(double **image, int width, int height)
 	return new;
 }
 
-unsigned char **IDCTImage(double **image, int width, int height) {
+double **IDCTImage(double **image, int width, int height) {
 	int w, h;
 	double **IDCTImage = allocateDoubleMatrix(width, height);
 	for (h = 0; h < height; h+=8) {
@@ -111,11 +111,11 @@ unsigned char **IDCTImage(double **image, int width, int height) {
 			idct(image, IDCTImage, w, h);
 		}
 	}
-	unsigned char **final = convertDoubleMatrixToChar(IDCTImage, width, height);
-	return final;
+	// unsigned char **final = convertDoubleMatrixToChar(IDCTImage, width, height);
+	return IDCTImage;
 }
 
-double **DCTImage(unsigned char **image, int width, int height) {
+double **DCTImage(/*unsigned char*/double **image, int width, int height) {
 	int w, h;
 	double **DCTImage = allocateDoubleMatrix(width, height);
 	for (h = 0; h < height; h+=8) {

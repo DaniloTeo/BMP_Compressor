@@ -106,6 +106,33 @@ void writeBMPFile(unsigned char **B, unsigned char **G, unsigned char **R, BMPFI
 	fclose(out);
 }	
 
+void RGB2YCbCr(unsigned char **R, unsigned char **G, unsigned char **B, int height, int width, double **Y, double **Cb, double **Cr){
+	int i, j;
+
+	for(i = 0; i < height; i++){
+		for(j = 0; j < width; j++){
+			Y[i][j] = (0.299f * (R[i][j]) + 0.587f * (G[i][j]) + 0.114f * (B[i][j]));
+			Cb[i][j] = 0.564f * (B[i][j] - Y[i][j]);
+			Cr[i][j] = 0.713f * (R[i][j] - Y[i][j]);
+		}
+	}
+}
+
+
+void YCbCr2RGB(double **Y, double **Cb, double **Cr,  int height, int width, unsigned char **R, unsigned char **G, unsigned char **B){
+	int i, j;
+
+	for(i = 0; i < height; i++){
+		for(j = 0; j < width; j++){
+			R[i][j] = Y[i][j] + (1.402f * Cr[i][j]);
+			G[i][j] = Y[i][j] - (0.344f * Cb[i][j]) - (0.714f * Cr[i][j]);
+			B[i][j] = Y[i][j] + (1.772f * Cb[i][j]);
+		}
+	}
+}
+
+
+
 unsigned char **alocaMatrizUnChar(int lin, int col){
 	int i = 0;
 	unsigned char **mat = (unsigned char **) malloc(sizeof(unsigned char *) * lin);
@@ -155,3 +182,5 @@ void printUnCharMatriz(unsigned char **m, int lin, int col){
 		printf("\n");
 	}
 }
+
+

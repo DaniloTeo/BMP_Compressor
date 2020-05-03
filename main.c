@@ -32,22 +32,36 @@ int main(int argc, char *argv[]){
 	printf("Image loaded!\n");
 
 
+	double **Y = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
+	double **Cb = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
+	double **Cr = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
+
+
+	printf("Applying RGB --> YCbCr Conversion\n");
+	RGB2YCbCr(R, G, B, infoHeader.biHeight, infoHeader.biWidth, Y, Cb, Cr);
+
 	//Aplicação da DCT
 	printf("Applying DCT to BGR Components...\n");
-	double **BAfterDCT = DCTImage(B, infoHeader.biWidth, infoHeader.biHeight);
-	double **GAfterDCT = DCTImage(G, infoHeader.biWidth, infoHeader.biHeight);
-	double **RAfterDCT = DCTImage(R, infoHeader.biWidth, infoHeader.biHeight);
+	double **YAfterDCT = DCTImage(Y, infoHeader.biWidth, infoHeader.biHeight);
+	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
+	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying Quantization...\n");
-	double **BQuantized = quantizeImage(BAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **GQuantized = quantizeImage(GAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **RQuantized = quantizeImage(RAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+
+	// Implementar (Des)Quantização
+
 
 	//Aplicacao da DCT inversa (Essa parte fica no descompressor)
 	printf("Applying IDCT to BGR Components...\n");
-	B = IDCTImage(BAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	G = IDCTImage(GAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	R = IDCTImage(RAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	Y = IDCTImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	Cb = IDCTImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	Cr = IDCTImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+
+	printf("Applying YCbCr --> RGB Conversion\n");
+	YCbCr2RGB(Y, Cb, Cr,  infoHeader.biHeight, infoHeader.biWidth, R, G, B);
 
 
 	// Escreve output
@@ -58,12 +72,15 @@ int main(int argc, char *argv[]){
 
 	// Liberacao de Memoria
 
-	freeDoubleMatrix(BQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(GQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(RQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(RAfterDCT, infoHeader.biHeight);
-	freeDoubleMatrix(GAfterDCT, infoHeader.biHeight);
-	freeDoubleMatrix(BAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(YQuantized, infoHeader.biHeight);
+	freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
+	freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
+	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CbAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CrAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(Y, infoHeader.biHeight);
+	freeDoubleMatrix(Cb, infoHeader.biHeight);
+	freeDoubleMatrix(Cr, infoHeader.biHeight);
 	liberaMatrizUnChar(R,infoHeader.biHeight);
 	liberaMatrizUnChar(G,infoHeader.biHeight);
 	liberaMatrizUnChar(B,infoHeader.biHeight);

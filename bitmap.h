@@ -43,6 +43,10 @@ void readBMPImage(FILE *f, unsigned char ***B, unsigned char ***G, unsigned char
 
 void writeBMPFile(unsigned char **B, unsigned char **G, unsigned char **R, BMPFILEHEADER *fileHeader, BMPINFOHEADER *infoHeader);	
 
+void RGB2YCbCr(unsigned char **R, unsigned char **G, unsigned char **B, int height, int width, double **Y, double **Cb, double **Cr);
+
+void YCbCr2RGB(double **Y, double **Cb, double **Cr,  int height, int width, unsigned char **R, unsigned char **G, unsigned char **B);
+
 unsigned char **alocaMatrizUnChar(int lin, int col);
 
 void liberaMatrizUnChar(unsigned char** matriz, int lin);

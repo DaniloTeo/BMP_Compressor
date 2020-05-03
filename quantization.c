@@ -12,14 +12,14 @@ const int quantTable[][8] = {	{16, 11, 10, 16, 24, 40, 51, 61},
 								{72, 92, 95, 98, 112, 100, 103, 99}
 							};
 
-double ** allocateDoubleMatrix(int width, int height) {
-	double **mat = (double **) malloc(sizeof(double *) * height);
-	int i, j;
-	for (i = 0; i < height; i++) {
-		mat[i] = (double *) malloc(sizeof(double) * width);
-	}
-	return mat;
-}
+// double ** allocateDoubleMatrix(int width, int height) {
+// 	double **mat = (double **) malloc(sizeof(double *) * height);
+// 	int i, j;
+// 	for (i = 0; i < height; i++) {
+// 		mat[i] = (double *) malloc(sizeof(double) * width);
+// 	}
+// 	return mat;
+// }
 
 void quantize(double **input, double **output, int startWidth, int startHeight ) {
 	int i, j;

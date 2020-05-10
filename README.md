@@ -1,13 +1,15 @@
 # Projeto: Compressão de Imagens
 
 ## **TO DO**:
- - Implementar Conversão RGB -> YCbCr
+ - Incorporar funcoes de RLE;
+ - Codar função inversa do zigzag scan;
  - Implementar Desquantização;
- - Implementar funções de compressão/descompressão Run-Length Enconding (RLE);
  - Implementar funções Compressão/Descompressão por Huffman;
  - Implementar funções de comparação dos algoritmos;
 
 ## **DONE**:
+ - Implementar funções de compressão/descompressão Run-Length Enconding (RLE);
+ - Implementar Conversão RGB -> YCbCr
  - Implementar ZigZag Scan;
  - Implementar Quantização;
  - Implementar separação em 8x8;

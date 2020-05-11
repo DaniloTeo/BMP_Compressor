@@ -51,6 +51,9 @@ int main(int argc, char *argv[]){
 	double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 	double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
+	
+	
+
 	// Implementar (Des)Quantização
 
 

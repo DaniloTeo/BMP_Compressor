@@ -1,6 +1,6 @@
 # Source, Executable, Includes, Library Defines
-INCL   = bitmap.h DCT.h quantization.h zigzag.h
-SRC    = main.c bitmap.c DCT.c quantization.c zigzag.c
+INCL   = bitmap.h DCT.h quantization.h zigzag.h rle.h
+SRC    = main.c bitmap.c DCT.c quantization.c zigzag.c rle.c
 OBJ    = $(SRC:.c=.o)
 LIBS   = -lm
 EXE    = BMP_compressor

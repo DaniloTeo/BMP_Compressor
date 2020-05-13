@@ -10,7 +10,7 @@ void down_and_left(int * count, int * i, int * j, double *vet, double **img, int
 		*i = *i + 1;
 		if(flag == 1)
 			{
-				// printf("linha 12\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
+				printf("linha 12\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
 						vet[*count] = img[*i][*j];}
 		else
 			img[*i][*j] = vet[*count];
@@ -24,7 +24,7 @@ void up_and_right(int * count, int * i, int * j, double *vet, double **img, int 
 		*i = *i - 1;
 		if(flag == 1)
 			{
-				// printf("linha 25\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
+				printf("linha 25\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
 						vet[*count] = img[*i][*j];}
 		else
 			img[*i][*j] = vet[*count];
@@ -38,7 +38,7 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 	printf("linha 34\nstarHeight: %d; startWidth: %d\n", startHeight, startWidth);
 	if(vet != NULL){
 		int i = startHeight, j = startWidth, count = 0;
-		// printf("linha 37\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+		printf("linha 37\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 		vet[count] = img[i][j];
 		count++;
 
@@ -50,7 +50,7 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 			else{
 				if(i+1 < (startHeight + maxDimension)) {i++;}
 			}
-			// printf("linha 49\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+			printf("linha 49\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 			vet[count] = img[i][j];
 			count++;
 
@@ -65,7 +65,7 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 			else{
 				if(j+1 < (startWidth + maxDimension)) j++;
 			}
-			// printf("linha 64\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+			printf("linha 64\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 			vet[count] = img[i][j];
 			count++;
 			
@@ -103,7 +103,7 @@ double ** zigzagImage(double **img, int width, int height, int *n_vet){
 }
 
 
-void deZigZag(double **img, double *vet, int maxDimension,int startWidth, int startHeight){
+void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int startWidth){
 	int i = startHeight, j = startWidth, count = 0;
 
 	img[i][j] = vet[count];
@@ -171,10 +171,10 @@ int main(int argc, char const *argv[]){
 	double ** img = (double **) malloc(sizeof(double*) * 480);
 
 	// printf("IMAGEM ORIGINAL:\n");
-	for(i = 0; i < 640; i++){
-			img[i] = (double*)malloc(sizeof(double) * 8);
-		for(j = 0; j < 480; j++){
-			img[i][j] = (i * 8) + j;
+	for(i = 0; i < 480; i++){
+			img[i] = (double*)malloc(sizeof(double) * 640);
+		for(j = 0; j < 640; j++){
+			img[i][j] = (i * 480) + j;
 			// printf("%.2lf ", img[i][j]);
 		}
 		// printf("\n");
@@ -183,7 +183,7 @@ int main(int argc, char const *argv[]){
 
 	int n_vet = 0;
 
-	double **vet = zigzagImage(img, 8, 8, &n_vet);
+	double **vet = zigzagImage(img, 640, 480, &n_vet);
 
 
 	// printf("VETORIZADO:\n");

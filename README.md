@@ -2,12 +2,12 @@
 
 ## **TO DO**:
  - Incorporar funcoes de RLE;
- - Codar função inversa do zigzag scan;
  - Implementar Desquantização;
  - Implementar funções Compressão/Descompressão por Huffman;
  - Implementar funções de comparação dos algoritmos;
 
 ## **DONE**:
+ - Codar função inversa do zigzag scan;
  - Implementar funções de compressão/descompressão Run-Length Enconding (RLE);
  - Implementar Conversão RGB -> YCbCr
  - Implementar ZigZag Scan;

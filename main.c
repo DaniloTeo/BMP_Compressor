@@ -4,6 +4,7 @@
 #include "bitmap.h"
 #include "DCT.h"
 #include "quantization.h"
+#include "zigzag.h"
 
 int main(int argc, char *argv[]){
 	// Alocando memoria pra arquivo
@@ -15,13 +16,13 @@ int main(int argc, char *argv[]){
 	printf("Reading File Header...\n");
 	BMPFILEHEADER fileHeader;
 	leituraFileHeader(f, &fileHeader);
-	dumpFileHeader(&fileHeader);
+	// dumpFileHeader(&fileHeader);
 
 	// Leitura e Exibição do infoHeader
 	printf("Reading Image Header...\n");
 	BMPINFOHEADER infoHeader;
 	leituraInfoHeader(f, &infoHeader);
-	dumpInfoHeader(&infoHeader);
+	// dumpInfoHeader(&infoHeader);
 
 	// Leitura dos componentes B,G,R da imagem
 	printf("Loading BGR Image components...\n");
@@ -41,23 +42,42 @@ int main(int argc, char *argv[]){
 	RGB2YCbCr(R, G, B, infoHeader.biHeight, infoHeader.biWidth, Y, Cb, Cr);
 
 	//Aplicação da DCT
-	printf("Applying DCT to BGR Components...\n");
+	printf("Applying DCT to YCbCr Components...\n");
 	double **YAfterDCT = DCTImage(Y, infoHeader.biWidth, infoHeader.biHeight);
 	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying Quantization...\n");
-	double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
+	//zigzag
+	int cont_y = 0, cont_cb = 0, cont_cr = 0;
+
+	printf("Applying ZigZagWalk...\n");
+	// double **Yzz = zigzagImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_y);
+	// double **Cbzz = zigzagImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_cb);
+	// double **Crzz = zigzagImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_cr);
 	
 	
+
+
+
+
+	//Essa parte fica no descompressor --------------------------------------------------------
+
+
+	//dezigzag
+	printf("Applying deZigZag...\n");
+	YAfterDCT = deZigZagImage(Yzz, cont_y, infoHeader.biWidth, infoHeader.biHeight);
+	CbAfterDCT = deZigZagImage(Cbzz, cont_cb, infoHeader.biWidth, infoHeader.biHeight);
+	CrAfterDCT = deZigZagImage(Crzz, cont_cr, infoHeader.biWidth, infoHeader.biHeight);
+
 
 	// Implementar (Des)Quantização
 
 
-	//Aplicacao da DCT inversa (Essa parte fica no descompressor)
 	printf("Applying IDCT to BGR Components...\n");
 	Y = IDCTImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 	Cb = IDCTImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
@@ -75,18 +95,31 @@ int main(int argc, char *argv[]){
 
 	// Liberacao de Memoria
 
-	freeDoubleMatrix(YQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
+	// Liberacao dos vetores do zizag
+	freeDoubleMatrix(Yzz, cont_y);
+	freeDoubleMatrix(Cbzz, cont_cb);
+	freeDoubleMatrix(Crzz, cont_cr);
+
+	//Liberacao dos vetores quantizados
+	// freeDoubleMatrix(YQuantized, infoHeader.biHeight);
+	// freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
+	// freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
+
+	// Liberacao dos vetores pos-DCT
 	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);
 	freeDoubleMatrix(CbAfterDCT, infoHeader.biHeight);
 	freeDoubleMatrix(CrAfterDCT, infoHeader.biHeight);
+
+	// Liberacao dos componentes YCbCr
 	freeDoubleMatrix(Y, infoHeader.biHeight);
 	freeDoubleMatrix(Cb, infoHeader.biHeight);
 	freeDoubleMatrix(Cr, infoHeader.biHeight);
+
+	//Liberacao dos componentes RGB
 	liberaMatrizUnChar(R,infoHeader.biHeight);
 	liberaMatrizUnChar(G,infoHeader.biHeight);
 	liberaMatrizUnChar(B,infoHeader.biHeight);
+
 	fclose(f);
 	
 	return 0;

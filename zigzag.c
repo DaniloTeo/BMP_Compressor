@@ -4,13 +4,13 @@
 
 
 
-void down_and_left(int * count, int * i, int * j, double *vet, double **img, int limit, int flag){
-	while(*j-1 >= 0 && *i+1 < limit){
+void down_and_left(int * count, int * i, int * j, double *vet, double **img, int limit, int minWidth,int flag){
+	while(*j-1 >= minWidth && *i+1 < limit){
 		*j = *j - 1;
 		*i = *i + 1;
 		if(flag == 1)
 			{
-				printf("linha 12\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
+				// printf("linha 12\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
 						vet[*count] = img[*i][*j];}
 		else
 			img[*i][*j] = vet[*count];
@@ -18,13 +18,13 @@ void down_and_left(int * count, int * i, int * j, double *vet, double **img, int
 	}
 }
 
-void up_and_right(int * count, int * i, int * j, double *vet, double **img, int limit, int flag){
-	while(*j+1 < limit && *i-1 >= 0){
+void up_and_right(int * count, int * i, int * j, double *vet, double **img, int limit, int minHeight,int flag){
+	while(*j+1 < limit && *i-1 >= minHeight){
 		*j = *j + 1;
 		*i = *i - 1;
 		if(flag == 1)
 			{
-				printf("linha 25\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
+				// printf("linha 25\nimg[%d][%d]: %lf; vet[%d]: %lf\n", *i, *j, img[*i][*j], *count, vet[*count]);
 						vet[*count] = img[*i][*j];}
 		else
 			img[*i][*j] = vet[*count];
@@ -35,10 +35,10 @@ void up_and_right(int * count, int * i, int * j, double *vet, double **img, int 
 
 double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWidth){
 	double *vet = (double *) malloc(sizeof(double) * (maxDimension * maxDimension));
-	printf("linha 34\nstarHeight: %d; startWidth: %d\n", startHeight, startWidth);
+	// printf("linha 34\nstarHeight: %d; startWidth: %d\n", startHeight, startWidth);
 	if(vet != NULL){
 		int i = startHeight, j = startWidth, count = 0;
-		printf("linha 37\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+		// printf("linha 37\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 		vet[count] = img[i][j];
 		count++;
 
@@ -50,12 +50,12 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 			else{
 				if(i+1 < (startHeight + maxDimension)) {i++;}
 			}
-			printf("linha 49\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+			// printf("linha 49\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 			vet[count] = img[i][j];
 			count++;
 
 			//feita essa etapa, podemos fazer o down_and_left
-			down_and_left(&count, &i, &j,vet, img, (startHeight + maxDimension), 1);
+			down_and_left(&count, &i, &j,vet, img, (startHeight + maxDimension), startWidth, 1);
 
 			// agora progredimos no outro sentido
 			//agora verificamos o limite das COLUNAS 
@@ -65,11 +65,11 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 			else{
 				if(j+1 < (startWidth + maxDimension)) j++;
 			}
-			printf("linha 64\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
+			// printf("linha 64\nimg[%d][%d]: %lf; vet[%d]: %lf\n", i, j, img[i][j], count, vet[count]);
 			vet[count] = img[i][j];
 			count++;
 			
-			up_and_right(&count, &i, &j, vet, img, (startWidth + maxDimension), 1);
+			up_and_right(&count, &i, &j, vet, img, (startWidth + maxDimension), startHeight, 1);
 
 
 		}
@@ -85,12 +85,12 @@ double ** zigzagImage(double **img, int width, int height, int *n_vet){
 
 	double **imageVector = (double **)malloc(sizeof(double *) * (width * height)/(8*8));
 
-	printf("n_vet: %d\n\n", *(n_vet));
+	// printf("width: %d; height: %d\n\n", width, height);
 	for(i = 0; i < height; i+=8){
 		for(j = 0; j < width; j+=8){
-			printf("linha 84\nk+1: %d\n", (k+1));
+			// printf("linha 84\nk+1: %d\n", (k+1));
 			imageVector[k] = zigzagwalk(img, 8, i, j);
-			printf("linha 86\n");
+			// printf("linha 86\n");
 			k++;
 		}	
 	}
@@ -122,7 +122,7 @@ void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int 
 		count++;
 
 		//feita essa etapa, podemos fazer o down_and_left
-		down_and_left(&count, &i, &j,vet, img, (startHeight + maxDimension), 0);
+		down_and_left(&count, &i, &j,vet, img, (startHeight + maxDimension), startWidth,0);
 
 		// agora progredimos no outro sentido
 		//agora verificamos o limite das COLUNAS 
@@ -136,7 +136,7 @@ void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int 
 		img[i][j] = vet[count];
 		count++;
 		
-		up_and_right(&count, &i, &j, vet, img, (startWidth + maxDimension), 0);
+		up_and_right(&count, &i, &j, vet, img, (startWidth + maxDimension), startHeight,0);
 
 
 	}
@@ -164,8 +164,7 @@ double **deZigZagImage(double **imageVector, int n_vet, int width, int height){
 	return newImg;
 }
 
-
-
+/*
 int main(int argc, char const *argv[]){
 	int i,j;
 	double ** img = (double **) malloc(sizeof(double*) * 480);
@@ -227,4 +226,4 @@ int main(int argc, char const *argv[]){
 	free(vet);
 
 	return 0;
-}
+}*/

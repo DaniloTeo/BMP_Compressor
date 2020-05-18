@@ -48,9 +48,9 @@ int main(int argc, char *argv[]){
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying Quantization...\n");
-	double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	//zigzag
 	int cont_y = 0, cont_cb = 0, cont_cr = 0;
@@ -76,17 +76,12 @@ int main(int argc, char *argv[]){
 
 
 	// Implementar (Des)Quantização
-	printf("Applying Dequantization...\n");
-	double **YDequantized = quantizeImage(YQuantized, infoHeader.biWidth, infoHeader.biHeight);
-	double **CbDequantized = quantizeImage(CbQuantized, infoHeader.biWidth, infoHeader.biHeight);
-	double **CrDequantized = quantizeImage(CrQuantized, infoHeader.biWidth, infoHeader.biHeight);
-	
 
 
 	printf("Applying IDCT to BGR Components...\n");
-	Y = IDCTImage(YDequantized, infoHeader.biWidth, infoHeader.biHeight);
-	Cb = IDCTImage(CbDequantized, infoHeader.biWidth, infoHeader.biHeight);
-	Cr = IDCTImage(CrDequantized, infoHeader.biWidth, infoHeader.biHeight);
+	Y = IDCTImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	Cb = IDCTImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	Cr = IDCTImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying YCbCr --> RGB Conversion\n");
 	YCbCr2RGB(Y, Cb, Cr,  infoHeader.biHeight, infoHeader.biWidth, R, G, B);
@@ -106,9 +101,9 @@ int main(int argc, char *argv[]){
 	freeDoubleMatrix(Crzz, cont_cr);
 
 	//Liberacao dos vetores quantizados
-	freeDoubleMatrix(YQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
-	freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
+	// freeDoubleMatrix(YQuantized, infoHeader.biHeight);
+	// freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
+	// freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
 
 	// Liberacao dos vetores pos-DCT
 	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);

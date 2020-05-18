@@ -183,4 +183,14 @@ void printUnCharMatriz(unsigned char **m, int lin, int col){
 	}
 }
 
+void printDoubleMatriz(unsigned double **m, int lin, int col){
+	int i,j;
+	for (i = 0; i < lin; i++){
+		for(j = 0; j < col; j++){
+			printf("%f ", m[i][j]);
+		}
+		printf("\n");
+	}
+}
+
 

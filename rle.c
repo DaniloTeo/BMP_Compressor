@@ -13,12 +13,20 @@ ENCODED_IMAGE *initializeEncoded(void){
 	return img;
 }
 
+
 void freeEncoded(ENCODED_IMAGE * img){
 	free(img->info);
 	free(img->qtds);
 	free(img);
 }
 
+void freeVetorEncoded(ENCODED_IMAGE **img, int len){
+	int i;
+	for(i = 0; i < len; i++){
+		freeEncoded(img[i]);
+	}
+	free(img);
+}
 void printVetorInt(int *vet, int n){
 	int i = 0;
 	printf("TAMANHO DO VETOR INTEIRO: %d\n", n);

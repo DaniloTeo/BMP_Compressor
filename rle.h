@@ -14,6 +14,8 @@ ENCODED_IMAGE *initializeEncoded(void);
 
 void freeEncoded(ENCODED_IMAGE * img);
 
+void freeVetorEncoded(ENCODED_IMAGE **img, int len);
+
 void printVetorInt(int *vet, int n);
 
 void printVetorDouble(double *vet, int n);

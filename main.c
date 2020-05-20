@@ -5,6 +5,7 @@
 #include "DCT.h"
 #include "quantization.h"
 #include "zigzag.h"
+#include "rle.h"
 
 int main(int argc, char *argv[]){
 	// Alocando memoria pra arquivo
@@ -61,11 +62,21 @@ int main(int argc, char *argv[]){
 	double **Crzz = zigzagImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_cr);
 	
 	
-
+	printf("Appyling RLE Encoding....\n");
+	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, cont_y);
+	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, cont_cb);
+	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, cont_cr);
 
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------
+
+	// decode
+
+	Yzz = decodeImage(Y_rle, cont_y);
+	Cbzz = decodeImage(Cb_rle, cont_cb);
+	Crzz = decodeImage(Cr_rle, cont_cr);
+
 
 
 	//dezigzag
@@ -94,6 +105,12 @@ int main(int argc, char *argv[]){
 
 
 	// Liberacao de Memoria
+
+	freeVetorEncoded(Y_rle, cont_y);
+	freeVetorEncoded(Cb_rle, cont_cb);
+	freeVetorEncoded(Cr_rle, cont_cr);
+
+
 
 	// Liberacao dos vetores do zizag
 	freeDoubleMatrix(Yzz, cont_y);

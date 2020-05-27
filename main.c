@@ -49,17 +49,17 @@ int main(int argc, char *argv[]){
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying Quantization...\n");
-	// double **YQuantized = quantizeImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	// double **CbQuantized = quantizeImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	// double **CrQuantized = quantizeImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **YQuantized = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **CbQuantized = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double **CrQuantized = quantizeImageCroma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	//zigzag
 	int cont_y = 0, cont_cb = 0, cont_cr = 0;
 
 	printf("Applying ZigZagWalk...\n");
-	double **Yzz = zigzagImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_y);
-	double **Cbzz = zigzagImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_cb);
-	double **Crzz = zigzagImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &cont_cr);
+	double **Yzz = zigzagImage(YQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_y);
+	double **Cbzz = zigzagImage(CbQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_cb);
+	double **Crzz = zigzagImage(CrQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_cr);
 	
 	
 	printf("Appyling RLE Encoding....\n");

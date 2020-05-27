@@ -3,8 +3,12 @@
 
 // double ** allocateDoubleMatrix(int width, int height);
 
-void quantize(double **input, double **output, int startWidth, int startHeight );
+void quantizeLuma(double **input, double **output, int startWidth, int startHeight );
 
-double **quantizeImage(double **image, int width, int height);
+double **quantizeImageLuma(double **image, int width, int height);
+
+void quantizeCroma(double **input, double **output, int startWidth, int startHeight );
+
+double **quantizeImageCroma(double **image, int width, int height);
 
 #endif

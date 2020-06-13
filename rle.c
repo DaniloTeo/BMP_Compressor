@@ -4,6 +4,7 @@
 
 
 
+
 ENCODED_IMAGE *initializeEncoded(void){
 	ENCODED_IMAGE *img = (ENCODED_IMAGE *) malloc(sizeof(ENCODED_IMAGE));
 	img->info = NULL;
@@ -14,11 +15,14 @@ ENCODED_IMAGE *initializeEncoded(void){
 }
 
 
+
 void freeEncoded(ENCODED_IMAGE * img){
 	free(img->info);
 	free(img->qtds);
 	free(img);
 }
+
+
 
 void freeVetorEncoded(ENCODED_IMAGE **img, int len){
 	int i;
@@ -27,6 +31,7 @@ void freeVetorEncoded(ENCODED_IMAGE **img, int len){
 	}
 	free(img);
 }
+
 void printVetorInt(int *vet, int n){
 	int i = 0;
 	printf("TAMANHO DO VETOR INTEIRO: %d\n", n);
@@ -36,6 +41,7 @@ void printVetorInt(int *vet, int n){
 	}
 	printf("\n");
 }
+
 void printVetorDouble(double *vet, int n){
 	int i = 0;
 	printf("TAMANHO DO VETOR: %d\n", n);
@@ -45,6 +51,7 @@ void printVetorDouble(double *vet, int n){
 	}
 	printf("\n");
 }
+
 
 void encodeRLE(double *vet, int n, ENCODED_IMAGE *out){
 	int i, count;

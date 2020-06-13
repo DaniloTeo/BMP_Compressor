@@ -35,7 +35,7 @@ void freeCharMatrix(unsigned char **mat, int height) {
 	}
 	free(mat);
 }
-void dct(/*unsigned char*/double **input, double **output, int startWidth, int startHeight ) {
+void dct(double **input, double **output, int startWidth, int startHeight ) {
 	int i, j, k, l;
 	double ci, cj, dct1, sum, cos1, cos2;
 	for (i = startHeight; i < startHeight + 8; i++) {

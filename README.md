@@ -40,7 +40,7 @@ As técnicas de compressão a serem desenvolvidas são, no mínimo: compressão 
 1. Somente os bits que representam cada código gerado devem ser gravados no arquivo binário desaída;
 2. O projeto deve apresentar implementações funcionais para Compressor e Descompressor;
 3. O compressor e o descompressor devem se encontram em módulos diferentes e devidamente implementado como programas;
-4. A   implementação   das   técnicas   deverá   primar   pela   busca   da   maior   taxa   de   compressão   commelhor qualidade possível;
+4. A   implementação   das   técnicas   deverá   primar   pela   busca   da   maior   taxa   de   compressão   com melhor qualidade possível;
 
 
 ## Modelo da Imagem

@@ -47,7 +47,7 @@ void printVetorDouble(double *vet, int n){
 	printf("TAMANHO DO VETOR: %d\n", n);
 	printf("VETOR:\n");
 	for(i = 0; i < n; i++){
-		printf("%lf ", vet[i]);
+		printf("%.2lf ", vet[i]);
 	}
 	printf("\n");
 }
@@ -135,11 +135,11 @@ double **decodeImage(ENCODED_IMAGE **encoded, int length){
 
 
 
-/*
+
 int main(void){
 	// char string[] = "wwwwaaadexxxxxxywww";
 	int i, j;
-	int width = 64, height = 8;
+	int width = 8, height = 8;
 	srand(time(NULL));
 
 
@@ -187,4 +187,3 @@ int main(void){
 	return 0;
 
 }
-*/

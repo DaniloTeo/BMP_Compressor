@@ -35,7 +35,7 @@ double **quantizeImageLuma(double **image, int width, int height) {
 	double **quantImage = alocaMatrizDouble(height, width);
 	for (h = 0; h < height; h+=8) {
 		for (w = 0; w < width; w+=8) {
-			quantize(image, quantImage, w, h);
+			quantizeLuma(image, quantImage, w, h);
 		}
 	}
 	return quantImage;
@@ -64,7 +64,7 @@ double **quantizeImageCroma(double **image, int width, int height) {
 	double **quantImage = alocaMatrizDouble(height, width);
 	for (h = 0; h < height; h+=8) {
 		for (w = 0; w < width; w+=8) {
-			quantize(image, quantImage, w, h);
+			quantizeCroma(image, quantImage, w, h);
 		}
 	}
 	return quantImage;

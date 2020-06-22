@@ -134,7 +134,7 @@ double **decodeImage(ENCODED_IMAGE **encoded, int length){
 }
 
 
-
+/*
 
 int main(void){
 	// char string[] = "wwwwaaadexxxxxxywww";
@@ -187,3 +187,4 @@ int main(void){
 	return 0;
 
 }
+*/

@@ -31,31 +31,14 @@ PARAMETROS:
 RETORNO:
 	double * vet: vetor linear com os elementos inseridos na ordem em que foram escaneados
 */
-double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWidth);
+double * zigzagwalk(double **img, int width, int height);
 
-
-/*
-double ** zigzagImage: divide uma imagem em sub-seções de maxDimension X maxDimension
-e executa sobre elas a função zigzagwalk.
-PARAMETROS:
-	double **img: matriz da imagem codificada em doubles;
-	int width,height: dimensoes da matriz original;
-	int *n_vet: ponteiro para o contador de elementos de um vetor de vetores (cada sub-seção retorna um vetor)
-RETORNO:
-	double ** imageVector: vetor de tamanho n_vet de double * um para cada sub-seção da matriz original
-*/
-double ** zigzagImage(double **img, int width, int height, int *n_vet);
 
 
 /*
 void deZigZag: função inversa da função zigzagwalk fazendo o decoding do vetor para matriz
 */
-void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int startWidth);
-
-/*
-void deZigZagImage: função inversa da função zigzagImage fazendo o decoding dos vetores para matriz
-*/
-double **deZigZagImage(double **imageVector, int n_vet, int width, int height);
+void deZigZag(double **img, double *vet, int width, int height);
 
 
 

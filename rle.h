@@ -27,7 +27,7 @@ PARAMETROS:
 RETORNA:
 	ENCODED_IMAGE *img: struct devidamente inicializada
 */
-ENCODED_IMAGE *initializeEncoded(void);
+ENCODED_IMAGE *initializeEncoded(int tam_vet);
 
 /*
 void freeEncoded: libera a memoria alocada para um elemento ENCODED_IMAGE
@@ -68,12 +68,12 @@ RETORNA:
 	[retorno por derreferência]
 
 */
-void encodeRLE(double *vet, int n, ENCODED_IMAGE *out);
+ENCODED_IMAGE * encodeRLE(double *vet, int n);
 
 /*
 double decodeRLE: função inversa da função encodeRLE
 */
-double *decodeRLE(ENCODED_IMAGE *input, int *decomp_len);
+void decodeRLE(ENCODED_IMAGE *input, double * output, int len);
 
 /*
 ENCODED_IMAGE **encodeImage: função que itera sobre um vetor de double * e executa o RUN-LENGTH

@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include "bitmap.h"
+#include "rle.h"
 
 /*Start of Bitmap Aux functions *******************************************************/
 void leituraFileHeader(FILE *F, BMPFILEHEADER *H){
@@ -71,6 +72,34 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 	printf("No of Important Colors: %u\n", h->biClrImportant);
 	printf("-----+-----+-----+-----+-----+-----+\n");
 }
+
+void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE *Y, ENCODED_IMAGE *Cb, ENCODED_IMAGE *Cr, BMPINFOHEADER *infoHeader){
+  int i = 0;
+	FILE *out = fopen("out.xbl", "wb");
+
+	writeBMPFileHeader(out, fileHeader);
+	writeBMPInfoHeader(out, infoHeader);
+
+	fwrite(&(Y->len), sizeof(int), 1, out);
+	fwrite(&(Cb->len), sizeof(int), 1, out);
+	fwrite(&(Cr->len), sizeof(int), 1, out);
+
+  // for (i = 0; i < Y->len; i++) {
+  //   fwrite(&(Y->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Y->qtds[i]), sizeof(char), 1, out);
+  // }
+  // for (i = 0; i < Cb->len; i++) {
+  //   fwrite(&(Cb->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Cb->qtds[i]), sizeof(char), 1, out);
+  // }
+  // for (i = 0; i < Cr->len; i++) {
+  //   fwrite(&(Cr->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Cr->qtds[i]), sizeof(char), 1, out);
+  // }
+
+  fclose(out);
+}
+
 /*End of Bitmap Aux functions *******************************************************/
 
 void readBMPImage(FILE *f, unsigned char ***B, unsigned char ***G, unsigned char ***R, int lin, int col){

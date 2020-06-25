@@ -12,8 +12,8 @@ ENCODE_IMAGE
 		int len: tamanho de ambos os vetores acima
 */
 typedef struct{
-	double *info;
-	int *qtds;
+	char *info;
+	char *qtds;
 	int len;
 
 } ENCODED_IMAGE;

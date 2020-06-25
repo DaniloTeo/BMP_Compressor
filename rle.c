@@ -62,8 +62,8 @@ ENCODED_IMAGE * encodeRLE(double *vet, int n){
 	ENCODED_IMAGE * out = initializeEncoded(n);
 
 	// printf("Alocando novo vetor com o tamanho original...\n");
-	out->info = (double *)malloc(sizeof(double) * n);
-	out->qtds = (int *) calloc(n, sizeof(int));
+	out->info = (char *)malloc(sizeof(char) * n);
+	out->qtds = (char *) calloc(n, sizeof(char));
 	
 	for(i = 0; i < n; i++){
 		count = 1;
@@ -83,9 +83,9 @@ ENCODED_IMAGE * encodeRLE(double *vet, int n){
 	// printf("Fim do algoritmo principal...\n");
 	// printf("\n\n");
 
-	out->info = (double *) realloc(out->info, sizeof(double) * (out->len));
+	out->info = (char *) realloc(out->info, sizeof(char) * (out->len));
 	
-	out->qtds = (int *) realloc(out->qtds, sizeof(double) * (out->len));
+	out->qtds = (char *) realloc(out->qtds, sizeof(char) * (out->len));
 
 	return out;
 }

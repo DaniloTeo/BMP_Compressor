@@ -1,5 +1,7 @@
 #ifndef BITMAP_H_INCLUDED
 #define BITMAP_H_INCLUDED
+#include "rle.h"
+
 // Start of Bitmap Data Structures *******************************************************
 typedef struct { 						/**** BMP file header structure ****/    
 	unsigned short bfType;			/* Magic number for file */ 
@@ -122,5 +124,8 @@ double **alocaMatrizDouble(int lin, int col);
 void liberaMatrizDouble(double** matriz, int lin);
 
 void printUnCharMatriz(unsigned char **m, int lin, int col);
+
+void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE *Y, ENCODED_IMAGE *Cb, ENCODED_IMAGE *Cr, BMPINFOHEADER *infoHeader);
+
 
 #endif

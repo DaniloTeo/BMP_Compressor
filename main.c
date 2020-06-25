@@ -3,7 +3,6 @@
 #include <math.h>
 #include "bitmap.h"
 #include "DCT.h"
-#include "quantization.h"
 #include "zigzag.h"
 #include "rle.h"
 
@@ -49,41 +48,38 @@ int main(int argc, char *argv[]){
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying Quantization...\n");
-	double **YQuantized = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CbQuantized = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	double **CrQuantized = quantizeImageCroma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-
-	//zigzag
-	int cont_y = 0, cont_cb = 0, cont_cr = 0;
+	// double **YQuantized = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CbQuantized = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CrQuantized = quantizeImageCroma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying ZigZagWalk...\n");
-	double **Yzz = zigzagImage(YQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_y);
-	double **Cbzz = zigzagImage(CbQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_cb);
-	double **Crzz = zigzagImage(CrQuantized, infoHeader.biWidth, infoHeader.biHeight, &cont_cr);
-	
+	double *Yzz = zigzagwalk(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double *Cbzz = zigzagwalk(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double *Crzz = zigzagwalk(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 	
 	printf("Appyling RLE Encoding....\n");
-	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, cont_y);
-	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, cont_cb);
-	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, cont_cr);
+	ENCODED_IMAGE * Y_rle = encodeRLE(Yzz, (infoHeader.biWidth * infoHeader.biHeight));
+	ENCODED_IMAGE * Cb_rle = encodeRLE(Cbzz, (infoHeader.biWidth * infoHeader.biHeight));
+	ENCODED_IMAGE * Cr_rle = encodeRLE(Crzz, (infoHeader.biWidth * infoHeader.biHeight));
 
+  writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------
 
 	// decode
 
-	Yzz = decodeImage(Y_rle, cont_y);
-	Cbzz = decodeImage(Cb_rle, cont_cb);
-	Crzz = decodeImage(Cr_rle, cont_cr);
+	decodeRLE(Y_rle, Yzz, (infoHeader.biWidth * infoHeader.biHeight));
+	decodeRLE(Cb_rle, Cbzz, (infoHeader.biWidth * infoHeader.biHeight));
+	decodeRLE(Cr_rle, Crzz, (infoHeader.biWidth * infoHeader.biHeight));
 
 
 
 	//dezigzag
 	printf("Applying deZigZag...\n");
-	YAfterDCT = deZigZagImage(Yzz, cont_y, infoHeader.biWidth, infoHeader.biHeight);
-	CbAfterDCT = deZigZagImage(Cbzz, cont_cb, infoHeader.biWidth, infoHeader.biHeight);
-	CrAfterDCT = deZigZagImage(Crzz, cont_cr, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(YAfterDCT, Yzz, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(CbAfterDCT, Cbzz, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(CrAfterDCT, Crzz, infoHeader.biWidth, infoHeader.biHeight);
 
 
 	// Implementar (Des)Quantização
@@ -106,16 +102,16 @@ int main(int argc, char *argv[]){
 
 	// Liberacao de Memoria
 
-	freeVetorEncoded(Y_rle, cont_y);
-	freeVetorEncoded(Cb_rle, cont_cb);
-	freeVetorEncoded(Cr_rle, cont_cr);
+	freeEncoded(Y_rle);
+	freeEncoded(Cb_rle);
+	freeEncoded(Cr_rle);
 
 
 
 	// Liberacao dos vetores do zizag
-	freeDoubleMatrix(Yzz, cont_y);
-	freeDoubleMatrix(Cbzz, cont_cb);
-	freeDoubleMatrix(Crzz, cont_cr);
+	free(Yzz);
+	free(Cbzz);
+	free(Crzz);
 
 	//Liberacao dos vetores quantizados
 	// freeDoubleMatrix(YQuantized, infoHeader.biHeight);

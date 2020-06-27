@@ -31,15 +31,15 @@ PARAMETROS:
 RETORNO:
 	double * vet: vetor linear com os elementos inseridos na ordem em que foram escaneados
 */
-double * zigzagwalk(double **img, int width, int height);
+double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWidth);
 
-
+double ** zigzagImage(double **img, int width, int height, int *n_vet);
 
 /*
 void deZigZag: função inversa da função zigzagwalk fazendo o decoding do vetor para matriz
 */
-void deZigZag(double **img, double *vet, int width, int height);
+void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int startWidth);
 
-
+double **deZigZagImage(double **imageVector, int n_vet, int width, int height);
 
 #endif

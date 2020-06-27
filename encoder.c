@@ -181,17 +181,147 @@ void valueEncoding (BINARY_ENCODING *obj) {
   strcpy(&(obj->code[obj->len - obj->mantissa + 1]), &(p[33 - obj->mantissa]));
 }
 
-// int main(int argc, char *argv[]){
-//   int i;
-//   int size = 201;
-//   int *array = (int *) malloc(sizeof(int) * size);
-//   for (i = 0; i < size; i++) {
-//     array[i] = i;
-//   }
-//   BINARY_ENCODING *encoded = coeficientCodification(array, size);
-//   for (i = 0; i < size; i++) {
-//     printf("Value = %d, Prefix Length = %d, Code Length = %d, Base Value = %d, Code = %s\n", encoded[i].val, encoded[i].prefLen, encoded[i].len, encoded[i].catBaseVal, encoded[i].code);
-//     printf("Categoria = %c, Prefix = %s, Comprimento total = %d, Comprimento da mantissa = %d\n", encoded[i].cat, encoded[i].code, encoded[i].len, encoded[i].mantissa);
-//   }
-//   return 0;
-// }
+char * encoded2FullMessage(BINARY_ENCODING *encoded, int size){
+  int i;
+  
+  int messageLen = 0;
+  for(i = 0; i < size; i++){
+    messageLen += encoded[i].len;
+  }
+
+  char *message = (char *) malloc(sizeof(char) * messageLen);
+
+  for(i = 0; i < size; i++){
+    strcat(message, encoded[i].code);
+  }
+
+  return message;
+
+}
+
+unsigned char *message2Buffer(char *message, int *bufferLen){
+  int i, j;
+  unsigned char *buffer = NULL;
+  int messageLen = strlen(message);
+  int count = 0;
+  int charTam = 8;
+  
+  for(i = 0; i < messageLen; i += charTam){
+    
+    buffer = (unsigned char *) realloc (buffer, (sizeof(unsigned char) * (count + 1)));
+    count++;
+    
+    for(j = i; j < charTam; j++){      
+      // conversao do byte atual para um unico bit no buffer
+      buffer[count] = ((buffer[count] << 1) | (message[j] == '1'));
+    }
+  }
+
+  *bufferLen = count;
+  return buffer;
+
+}
+
+void char2String(unsigned char c, char *decoded, int len){
+  char *str = (char *) malloc(sizeof(char ) * 8);
+  unsigned char aux;
+  int i;
+
+  for(i = 7; i >= 0; i--){
+    aux = c >> i;
+    str[7-i] = '0' + aux;
+
+    aux = aux << i;
+    c -= aux;
+  }
+
+  strcat(decoded, str);
+
+  free(str);
+}
+
+char * file2Message(FILE *f, int fileLen){
+  int i;
+  unsigned char aux;
+  char *decoded = (char *) malloc((fileLen * 8) + 1);
+  i = ftell(f);
+  
+  while(i < fileLen){
+
+    fread(&aux, sizeof(unsigned char), 1, f);
+    char2String(aux, decoded, (fileLen * 8));
+    
+    i = ftell(f);
+  }
+
+
+  return decoded;
+
+}
+
+
+
+int main(int argc, char *argv[]){
+  int i;
+  int size = 256;
+  int *array = (int *) malloc(sizeof(int) * size);
+  for (i = 0; i < size; i++) {
+    array[i] = i;
+  }
+  BINARY_ENCODING *encoded = coeficientCodification(array, size);
+  char *message = encoded2FullMessage(encoded, size);
+
+  // printf("%s\n", message);
+  int bufferLen = 0;
+  unsigned char *buffer = message2Buffer(message, &bufferLen);
+  // printf("bufferLen: %d\n", bufferLen);
+
+  // for(i = 0; i < bufferLen; i++){
+  //   printf("%c ", buffer[i]);
+  // }
+  // printf("\n");
+
+
+  FILE *out_bin, *in_bin;
+  printf("Turning char to binary...\n");
+ 
+  // Salvando binario do codigo criado
+  printf("Writing binary file...\n");
+  out_bin = fopen("out_bits.bin", "wb");
+  fwrite(buffer, sizeof(unsigned char), bufferLen , out_bin);
+  fclose(out_bin);
+
+  
+  in_bin  = fopen("out_bits.bin", "rb");
+  
+  fseek(in_bin, 0L, SEEK_END);
+  int fileLen = ftell(in_bin);
+  printf("fileLen * 8 = %d, strlen(message) = %d\n", fileLen*8, strlen(message));
+  rewind(in_bin);
+
+  char *decoded = file2Message(in_bin, fileLen);
+
+
+  if(strlen(decoded) == strlen(message)){
+    printf("TAMANHOS IGUAIS\n");
+
+    for(i = 0; i < strlen(decoded); i++){
+      if(message[i] != decoded[i]){
+        printf("ALERTA DE ERRO---------\n");
+        break;
+      }
+    }
+
+    if(i == strlen(decoded)) printf("ALERTA DE TA TUDO BEM\n");
+
+  }
+  else printf("TAMANHOS DIFERENTES!\nstrlen(message)= %d | strlen(decoded)= %d\n", strlen(message), strlen(decoded));
+
+
+  free(decoded);
+  free(message);
+  free(buffer);
+  fclose(in_bin);
+
+  return 0;
+}

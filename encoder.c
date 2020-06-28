@@ -311,8 +311,8 @@ int decodeNumber(char *suffix, int suffixSize) {
   return baseCatVal;
 }
 
-int *decodeBinaryString(char *bin) {
-  int len = strlen(bin);
+int *decodeBinaryString(char *bin, int fileLen) {
+  int len = fileLen;//strlen(bin);
   int i, suffixSize, j, val, prefixIndex;
   int *decodedValues = (int *) malloc(sizeof(int));
   char *prefix = (char *) malloc(sizeof(char) * 9);
@@ -322,7 +322,7 @@ int *decodeBinaryString(char *bin) {
   for (i = 0; i < len; i++) {
     prefix[prefixIndex] = bin[i];
     prefixIndex++;
-    printf("prefixo = %s\n", prefix);
+    // printf("prefixo = %s\n", prefix);
     suffixSize = isPrefix(prefix);
     if (suffixSize == 0) {
       decodedValues[val] = 0;
@@ -337,22 +337,23 @@ int *decodeBinaryString(char *bin) {
         suffix[j - i - 1] = bin[j];
       }
       suffix[suffixSize] = '\0';
-      printf("sufixo = %s\n",suffix);
+      // printf("sufixo = %s\n",suffix);
       decodedValues[val] = decodeNumber(suffix, suffixSize);
-      printf("VALOR DECODIFICADO = %d\n", decodedValues[val]);
-      printf("VALOR ESPERADO     = %d\n", val);
+      // printf("VALOR DECODIFICADO = %d\n", decodedValues[val]);
+      // printf("VALOR ESPERADO     = %d\n", val);
       val++;
-      i = i + j - 1;
+      // i = i + j - 1; // --> passo perde um monte de valores
+      i = i + suffixSize;
       decodedValues = (int *) realloc(decodedValues, sizeof(int) * (val + 1));
-      printf("I = %d, J = %d, PREFIXINDEX = %d\n", i, j, prefixIndex);
+      // printf("I = %d, J = %d, PREFIXINDEX = %d\n", i, j, prefixIndex);
       prefixIndex = 0;
       for (j = 0; j < 9; j++) {
         prefix[j] = '\0';
       }
     }
   }
-  // free(prefix);
-  // free(suffix);
+  free(prefix);
+  free(suffix);
   return decodedValues;
 }
 
@@ -366,10 +367,9 @@ int main(int argc, char *argv[]){
   BINARY_ENCODING *encoded = coeficientCodification(array, size);
   char *message = encoded2FullMessage(encoded, size);
 
-  // printf("%s\n", message);
   int bufferLen = 0;
   unsigned char *buffer = message2Buffer(message, &bufferLen);
-  printf("bufferLen: %d\n", bufferLen);
+  // printf("bufferLen: %d\n", bufferLen);
 
 
 
@@ -396,35 +396,17 @@ int main(int argc, char *argv[]){
   rewind(in_bin);
  
   fread(&fileLen, sizeof(int), 1, in_bin);
-  printf("tam: %d, fileLen  = %d, strlen(message) = %d\n",tam, fileLen, messageLen);
-
   char *decoded = file2Message(in_bin, fileLen);
-  int *fullyDecoded4real = decodeBinaryString(decoded);
-  for (i = 0; i < size; i++) {
-    printf("VALOR REAL OFICIAL = %d\n", array[i]);
-    printf("VALOR QUE TEM QUE SER IGUAL = %d\n", fullyDecoded4real[i]);
-  }
-  // // if(strlen(decoded) == strlen(message)){
-  //   printf("TAMANHOS IGUAIS\n");
+  
+  
 
-  //   for(i = 0; i < fileLen; i++){
-  //     if(message[i] != decoded[i]){
-  //       printf("ALERTA DE ERRO---------\nmessage[%d] = %c, decoded[%d] = %c\n\n", i, message[i], i, decoded[i]);
-  //       // printf("message--\n%s\n", message);
-  //       // printf("decoded--\n%s\n", decoded);
-  //       break;
-  //     }
-  //   }
-
-    // if(i == fileLen) printf("ALERTA DE TA TUDO BEM\n");
-
-  // }
-  // else printf("TAMANHOS DIFERENTES!\nstrlen(message)= %ld | strlen(decoded)= %ld\n", strlen(message), strlen(decoded));
+  int *fullyDecoded4real = decodeBinaryString(decoded, fileLen);
+  
 
   free(decoded);
   free(message);
   free(buffer);
-  // free(fullyDecoded4real);
+  free(fullyDecoded4real);
   fclose(in_bin);
 
   return 0;

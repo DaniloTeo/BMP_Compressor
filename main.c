@@ -5,6 +5,7 @@
 #include "DCT.h"
 #include "zigzag.h"
 #include "rle.h"
+#include "encoder.h"
 
 int main(int argc, char *argv[]){
 	// Alocando memoria pra arquivo

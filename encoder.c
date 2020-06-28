@@ -94,11 +94,11 @@ BINARY_ENCODING *coeficientCodification (int *arr, int len) {
       cat = 'B';
     }
     encoded[i].cat = cat;
-    printf("encoded:97\n");
+    // printf("encoded:97\n");
     getDCPrefix(&(encoded[i]), cat);
-    printf("encoded:99\n");
+    // printf("encoded:99\n");
     valueEncoding(&(encoded[i]));
-    printf("encoded:101\n");
+    // printf("encoded:101\n");
   }
   return encoded;
 }
@@ -378,11 +378,15 @@ void EI2File(ENCODED_IMAGE **img, FILE *f, int len) {
   printf("len: %d\n", len);
   
   for (i = 0; i < len; i++) {
+    printf("i = %d\n", i);
+    if (i >= len) {
+      printf("ERA PRA TER PARADO PORRA\n");
+    }
     // printf("encoder:373\n");
     encodedQts = coeficientCodification(img[i]->qtds, img[i]->len);
     // printf("encoder:375\n");
     encodedVals = coeficientCodification(img[i]->info, img[i]->len);
-    
+  
    
     //write qtds
     // printf("encoder:380\n");

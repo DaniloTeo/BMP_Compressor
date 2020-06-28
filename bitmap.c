@@ -73,7 +73,6 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 	printf("No of Important Colors: %u\n", h->biClrImportant);
 	printf("-----+-----+-----+-----+-----+-----+\n");
 }
-
 void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE **Cr, BMPINFOHEADER *infoHeader){
   int i = 0;
   	printf("bitmap:79\n");

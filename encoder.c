@@ -209,12 +209,16 @@ unsigned char *message2Buffer(char *message, int *bufferLen){
   for(i = 0; i < messageLen; i += charTam){
     
     buffer = (unsigned char *) realloc (buffer, (sizeof(unsigned char) * (count + 1)));
-    count++;
     
-    for(j = i; j < charTam; j++){      
+    
+    // printf("message ---- \n");
+    for(j = i; j < (charTam + i); j++){      
       // conversao do byte atual para um unico bit no buffer
       buffer[count] = ((buffer[count] << 1) | (message[j] == '1'));
+      // printf("%c ", message[j]);
     }
+    // printf("buffer[%d] = %d\n", count, buffer[count]);
+    count++;
   }
 
   *bufferLen = count;
@@ -224,35 +228,44 @@ unsigned char *message2Buffer(char *message, int *bufferLen){
 
 void char2String(unsigned char c, char *decoded, int len){
   char *str = (char *) malloc(sizeof(char ) * 8);
-  unsigned char aux;
+  unsigned char aux = 0;
   int i;
 
   for(i = 7; i >= 0; i--){
+    // printf("231: i = %d, c =  %d\n",i, c);
     aux = c >> i;
+    // printf("233: i = %d, aux =  %d\n",i, aux);
     str[7-i] = '0' + aux;
+    // printf("235: str[%d] = %d\n", (7-i), str[7-i]);
 
     aux = aux << i;
+    // printf("238: i = %d, aux =  %d\n",i, aux);
     c -= aux;
+  // printf("240: i = %d, c =  %d\n",i, c);
+
   }
 
   strcat(decoded, str);
-
+  // printf("decoded: %s\n", decoded);
   free(str);
+  // printf("241\n");
 }
 
 char * file2Message(FILE *f, int fileLen){
-  int i;
   unsigned char aux;
   char *decoded = (char *) malloc((fileLen * 8) + 1);
-  i = ftell(f);
-  
-  while(i < fileLen){
+  printf("fileLen: %d\n", fileLen);
 
+  do{
     fread(&aux, sizeof(unsigned char), 1, f);
+    // printf("-----------------------------------\n");
+    // printf("257: aux: %d, ftell(f): %d\n", (int)aux, (int)ftell(f));
     char2String(aux, decoded, (fileLen * 8));
+    // printf("-----------------------------------\n");
+    // printf("aux = %d, decoded = %s\n", aux, decoded);
     
-    i = ftell(f);
-  }
+  }while(!feof(f));
+  
 
 
   return decoded;
@@ -263,7 +276,7 @@ char * file2Message(FILE *f, int fileLen){
 
 int main(int argc, char *argv[]){
   int i;
-  int size = 256;
+  int size = 42;
   int *array = (int *) malloc(sizeof(int) * size);
   for (i = 0; i < size; i++) {
     array[i] = i;
@@ -274,12 +287,10 @@ int main(int argc, char *argv[]){
   // printf("%s\n", message);
   int bufferLen = 0;
   unsigned char *buffer = message2Buffer(message, &bufferLen);
-  // printf("bufferLen: %d\n", bufferLen);
+  printf("bufferLen: %d\n", bufferLen);
 
-  // for(i = 0; i < bufferLen; i++){
-  //   printf("%c ", buffer[i]);
-  // }
-  // printf("\n");
+
+
 
 
   FILE *out_bin, *in_bin;
@@ -288,35 +299,42 @@ int main(int argc, char *argv[]){
   // Salvando binario do codigo criado
   printf("Writing binary file...\n");
   out_bin = fopen("out_bits.bin", "wb");
+  int messageLen = (int) strlen(message);
+  fwrite(&messageLen, sizeof(int), 1 ,out_bin);
   fwrite(buffer, sizeof(unsigned char), bufferLen , out_bin);
   fclose(out_bin);
 
   
   in_bin  = fopen("out_bits.bin", "rb");
   
-  fseek(in_bin, 0L, SEEK_END);
-  int fileLen = ftell(in_bin);
-  printf("fileLen * 8 = %d, strlen(message) = %d\n", fileLen*8, strlen(message));
+  int fileLen = 0;
+ 
+  fseek(in_bin, 0, SEEK_END);
+  int tam = ftell(in_bin);
   rewind(in_bin);
+ 
+  fread(&fileLen, sizeof(int), 1, in_bin);
+  printf("tam: %d, fileLen  = %d, strlen(message) = %d\n",tam, fileLen, messageLen);
 
   char *decoded = file2Message(in_bin, fileLen);
 
 
-  if(strlen(decoded) == strlen(message)){
+  // if(strlen(decoded) == strlen(message)){
     printf("TAMANHOS IGUAIS\n");
 
-    for(i = 0; i < strlen(decoded); i++){
+    for(i = 0; i < fileLen; i++){
       if(message[i] != decoded[i]){
-        printf("ALERTA DE ERRO---------\n");
+        printf("ALERTA DE ERRO---------\nmessage[%d] = %c, decoded[%d] = %c\n\n", i, message[i], i, decoded[i]);
+        // printf("message--\n%s\n", message);
+        // printf("decoded--\n%s\n", decoded);
         break;
       }
     }
 
-    if(i == strlen(decoded)) printf("ALERTA DE TA TUDO BEM\n");
+    if(i == fileLen) printf("ALERTA DE TA TUDO BEM\n");
 
-  }
-  else printf("TAMANHOS DIFERENTES!\nstrlen(message)= %d | strlen(decoded)= %d\n", strlen(message), strlen(decoded));
-
+  // }
+  // else printf("TAMANHOS DIFERENTES!\nstrlen(message)= %ld | strlen(decoded)= %ld\n", strlen(message), strlen(decoded));
 
   free(decoded);
   free(message);

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <rle.h>
 #include "encoder.h"
 
 BINARY_ENCODING *coeficientCodification (int *arr, int len) {
@@ -357,57 +358,71 @@ int *decodeBinaryString(char *bin, int fileLen) {
   return decodedValues;
 }
 
-int main(int argc, char *argv[]){
+void EI2File(ENCODED_IMAGE **img, FILE *f, int len) {
   int i;
-  int size = 10;
-  int *array = (int *) malloc(sizeof(int) * size);
-  for (i = 0; i < size; i++) {
-    array[i] = i;
+  char *message = NULL;
+  BINARY_ENCODING *encodedQts = NULL;
+  BINARY_ENCODING *encodedVals = NULL;
+  char *auxMessage = NULL;
+   
+  for (i = 0; i < len; i++) {
+    encodedQts = coeficientCodification(img[i]->qtds, img[i]->len);
+    encodedVals = coeficientCodification(img[i]->info, img[i]->len);
+    
   }
-  BINARY_ENCODING *encoded = coeficientCodification(array, size);
-  char *message = encoded2FullMessage(encoded, size);
-
-  int bufferLen = 0;
-  unsigned char *buffer = message2Buffer(message, &bufferLen);
-  // printf("bufferLen: %d\n", bufferLen);
-
-
-
-
-
-  FILE *out_bin, *in_bin;
-  printf("Turning char to binary...\n");
- 
-  // Salvando binario do codigo criado
-  printf("Writing binary file...\n");
-  out_bin = fopen("out_bits.bin", "wb");
-  int messageLen = (int) strlen(message);
-  fwrite(&messageLen, sizeof(int), 1 ,out_bin);
-  fwrite(buffer, sizeof(unsigned char), bufferLen , out_bin);
-  fclose(out_bin);
-
-  
-  in_bin  = fopen("out_bits.bin", "rb");
-  
-  int fileLen = 0;
- 
-  fseek(in_bin, 0, SEEK_END);
-  int tam = ftell(in_bin);
-  rewind(in_bin);
- 
-  fread(&fileLen, sizeof(int), 1, in_bin);
-  char *decoded = file2Message(in_bin, fileLen);
-  
-  
-
-  int *fullyDecoded4real = decodeBinaryString(decoded, fileLen);
-  
-
-  free(decoded);
-  free(message);
-  free(buffer);
-  free(fullyDecoded4real);
-  fclose(in_bin);
-
-  return 0;
 }
+
+// int main(int argc, char *argv[]){
+//   int i;
+//   int size = 10;
+//   int *array = (int *) malloc(sizeof(int) * size);
+//   for (i = 0; i < size; i++) {
+//     array[i] = i;
+//   }
+//   BINARY_ENCODING *encoded = coeficientCodification(array, size);
+//   char *message = encoded2FullMessage(encoded, size);
+
+//   int bufferLen = 0;
+//   unsigned char *buffer = message2Buffer(message, &bufferLen);
+//   // printf("bufferLen: %d\n", bufferLen);
+
+
+
+
+
+//   FILE *out_bin, *in_bin;
+//   printf("Turning char to binary...\n");
+ 
+//   // Salvando binario do codigo criado
+//   printf("Writing binary file...\n");
+//   out_bin = fopen("out_bits.bin", "wb");
+//   int messageLen = (int) strlen(message);
+//   fwrite(&messageLen, sizeof(int), 1 ,out_bin);
+//   fwrite(buffer, sizeof(unsigned char), bufferLen , out_bin);
+//   fclose(out_bin);
+
+  
+//   in_bin  = fopen("out_bits.bin", "rb");
+  
+//   int fileLen = 0;
+ 
+//   fseek(in_bin, 0, SEEK_END);
+//   int tam = ftell(in_bin);
+//   rewind(in_bin);
+ 
+//   fread(&fileLen, sizeof(int), 1, in_bin);
+//   char *decoded = file2Message(in_bin, fileLen);
+  
+  
+
+//   int *fullyDecoded4real = decodeBinaryString(decoded, fileLen);
+  
+
+//   free(decoded);
+//   free(message);
+//   free(buffer);
+//   free(fullyDecoded4real);
+//   fclose(in_bin);
+
+//   return 0;
+// }

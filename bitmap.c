@@ -73,31 +73,26 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 	printf("-----+-----+-----+-----+-----+-----+\n");
 }
 
-void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE *Y, ENCODED_IMAGE *Cb, ENCODED_IMAGE *Cr, BMPINFOHEADER *infoHeader){
+void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE **Cr, BMPINFOHEADER *infoHeader){
   int i = 0;
 	FILE *out = fopen("out.xbl", "wb");
 
 	writeBMPFileHeader(out, fileHeader);
 	writeBMPInfoHeader(out, infoHeader);
-
-	fwrite(&(Y->len), sizeof(int), 1, out);
-	fwrite(&(Cb->len), sizeof(int), 1, out);
-	fwrite(&(Cr->len), sizeof(int), 1, out);
-
-  // for (i = 0; i < Y->len; i++) {
-  //   fwrite(&(Y->info[i]), sizeof(char), 1, out);
-  //   fwrite(&(Y->qtds[i]), sizeof(char), 1, out);
-  // }
-  // for (i = 0; i < Cb->len; i++) {
-  //   fwrite(&(Cb->info[i]), sizeof(char), 1, out);
-  //   fwrite(&(Cb->qtds[i]), sizeof(char), 1, out);
-  // }
-  // for (i = 0; i < Cr->len; i++) {
-  //   fwrite(&(Cr->info[i]), sizeof(char), 1, out);
-  //   fwrite(&(Cr->qtds[i]), sizeof(char), 1, out);
-  // }
+  
+  EI2File(Y, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
+  EI2File(Cb, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
+  EI2File(Cr, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
 
   fclose(out);
+}
+
+void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I ) {
+  leituraFileHeader(F, H);
+  leituraInfoHeader(F, I);
+  int nOfRLEs = (I->biHeight * I->biWidth) / 16;
+
+
 }
 
 /*End of Bitmap Aux functions *******************************************************/

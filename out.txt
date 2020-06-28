@@ -1,201 +1,48 @@
-Categoria = 0, Prefix = 010, Comprimento total = 3, Comprimento da mantissa = 0
-Categoria = 1, Prefix = 0111, Comprimento total = 4, Comprimento da mantissa = 1
-Categoria = 2, Prefix = 10010, Comprimento total = 5, Comprimento da mantissa = 2
-Categoria = 2, Prefix = 10011, Comprimento total = 5, Comprimento da mantissa = 2
-Categoria = 3, Prefix = 00100, Comprimento total = 5, Comprimento da mantissa = 3
-Categoria = 3, Prefix = 00101, Comprimento total = 5, Comprimento da mantissa = 3
-Categoria = 3, Prefix = 00110, Comprimento total = 5, Comprimento da mantissa = 3
-Categoria = 3, Prefix = 00111, Comprimento total = 5, Comprimento da mantissa = 3
-Categoria = 4, Prefix = 1011000, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011001, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011010, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011011, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011100, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011101, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011110, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 4, Prefix = 1011111, Comprimento total = 7, Comprimento da mantissa = 4
-Categoria = 5, Prefix = 11010000, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010001, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010010, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010011, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010100, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010101, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010110, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11010111, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011000, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011001, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011010, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011011, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011100, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011101, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011110, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 5, Prefix = 11011111, Comprimento total = 8, Comprimento da mantissa = 5
-Categoria = 6, Prefix = 1110100000, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100001, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100010, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100011, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100100, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100101, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100110, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110100111, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101000, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101001, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101010, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101011, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101100, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101101, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101110, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110101111, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110000, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110001, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110010, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110011, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110100, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110101, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110110, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110110111, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111000, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111001, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111010, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111011, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111100, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111101, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111110, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 6, Prefix = 1110111111, Comprimento total = 10, Comprimento da mantissa = 6
-Categoria = 7, Prefix = 111101000000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101000111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101001111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101010111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101011111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101100111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101101111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101110111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111000, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111001, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111010, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111011, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111100, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111101, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111110, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 7, Prefix = 111101111111, Comprimento total = 12, Comprimento da mantissa = 7
-Categoria = 8, Prefix = 11111010000000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010000111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010001111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010010111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010011111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010100111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010101111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010110111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111010111111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000000, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000001, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000010, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000011, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000100, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000101, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000110, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011000111, Comprimento total = 14, Comprimento da mantissa = 8
-Categoria = 8, Prefix = 11111011001000, Comprimento total = 14, Comprimento da mantissa = 8
+bufferLen: 7
+Turning char to binary...
+Writing binary file...
+tam: 11, fileLen  = 51, strlen(message) = 51
+fileLen: 51
+prefixo = 0
+prefixo = 01
+prefixo = 010
+prefixo = 0
+prefixo = 01
+prefixo = 011
+sufixo = 1
+VALOR DECODIFICADO = 1
+VALOR ESPERADO     = 1
+I = 11, J = 7, PREFIXINDEX = 3
+prefixo = 1
+prefixo = 10
+prefixo = 100
+sufixo = 11
+VALOR DECODIFICADO = 3
+VALOR ESPERADO     = 2
+I = 30, J = 17, PREFIXINDEX = 3
+prefixo = 0
+prefixo = 00
+sufixo = 011
+VALOR DECODIFICADO = -4
+VALOR ESPERADO     = 3
+I = 67, J = 36, PREFIXINDEX = 2
+VALOR REAL OFICIAL = 0
+VALOR QUE TEM QUE SER IGUAL = 0
+VALOR REAL OFICIAL = 1
+VALOR QUE TEM QUE SER IGUAL = 1
+VALOR REAL OFICIAL = 2
+VALOR QUE TEM QUE SER IGUAL = 3
+VALOR REAL OFICIAL = 3
+VALOR QUE TEM QUE SER IGUAL = -4
+VALOR REAL OFICIAL = 4
+VALOR QUE TEM QUE SER IGUAL = 0
+VALOR REAL OFICIAL = 5
+VALOR QUE TEM QUE SER IGUAL = 0
+VALOR REAL OFICIAL = 6
+VALOR QUE TEM QUE SER IGUAL = 33
+VALOR REAL OFICIAL = 7
+VALOR QUE TEM QUE SER IGUAL = 0
+VALOR REAL OFICIAL = 8
+VALOR QUE TEM QUE SER IGUAL = 0
+VALOR REAL OFICIAL = 9
+VALOR QUE TEM QUE SER IGUAL = 0

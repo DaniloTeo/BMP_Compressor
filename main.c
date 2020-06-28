@@ -63,7 +63,8 @@ int main(int argc, char *argv[]){
 	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
 	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
 
-  // writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
+  	printf("Writing binary file....\n");
+  	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------

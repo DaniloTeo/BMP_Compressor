@@ -2,13 +2,15 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include <rle.h>
+#include "rle.h"
 #include "encoder.h"
 
 BINARY_ENCODING *coeficientCodification (int *arr, int len) {
   int i;
   char cat;
+  printf("encoder:11\n");
   BINARY_ENCODING *encoded = (BINARY_ENCODING *) malloc(sizeof(BINARY_ENCODING) * len);
+  printf("encoder:13\n");
   for (i = 0; i < len; i++) {
     encoded[i].val = arr[i];
     if (arr[i] == 0) {
@@ -92,8 +94,11 @@ BINARY_ENCODING *coeficientCodification (int *arr, int len) {
       cat = 'B';
     }
     encoded[i].cat = cat;
+    printf("encoded:97\n");
     getDCPrefix(&(encoded[i]), cat);
+    printf("encoded:99\n");
     valueEncoding(&(encoded[i]));
+    printf("encoded:101\n");
   }
   return encoded;
 }
@@ -185,18 +190,19 @@ void valueEncoding (BINARY_ENCODING *obj) {
 
 char * encoded2FullMessage(BINARY_ENCODING *encoded, int size){
   int i;
-  
+  printf("encoded:194\n");
   int messageLen = 0;
   for(i = 0; i < size; i++){
     messageLen += encoded[i].len;
   }
+  printf("encoded:198\n");
 
   char *message = (char *) malloc(sizeof(char) * messageLen);
-
+  printf("encoded:201\n");
   for(i = 0; i < size; i++){
     strcat(message, encoded[i].code);
   }
-
+  printf("encoded:205\n");
   return message;
 
 }
@@ -207,7 +213,7 @@ unsigned char *message2Buffer(char *message, int *bufferLen){
   int messageLen = strlen(message);
   int count = 0;
   int charTam = 8;
-  
+  printf("encoded:216\n");
   for(i = 0; i < messageLen; i += charTam){
     
     buffer = (unsigned char *) realloc (buffer, (sizeof(unsigned char) * (count + 1)));
@@ -222,13 +228,14 @@ unsigned char *message2Buffer(char *message, int *bufferLen){
     // printf("buffer[%d] = %d\n", count, buffer[count]);
     count++;
   }
+  printf("encoded:231\n");
 
   *bufferLen = count;
   return buffer;
 
 }
 
-void char2String(unsigned char c, char *decoded, int len){
+void char2String(unsigned char c, char *decoded){
   char *str = (char *) malloc(sizeof(char ) * 8);
   unsigned char aux = 0;
   int i;
@@ -253,20 +260,22 @@ void char2String(unsigned char c, char *decoded, int len){
   // printf("241\n");
 }
 
-char * file2Message(FILE *f, int fileLen){
+char * file2Message(FILE *f, int fileLen, int bufferLen){
+  int i = 0;
   unsigned char aux;
   char *decoded = (char *) malloc((fileLen * 8) + 1);
   printf("fileLen: %d\n", fileLen);
 
   do{
     fread(&aux, sizeof(unsigned char), 1, f);
+    i++;
     // printf("-----------------------------------\n");
     // printf("257: aux: %d, ftell(f): %d\n", (int)aux, (int)ftell(f));
-    char2String(aux, decoded, (fileLen * 8));
+    char2String(aux, decoded);
     // printf("-----------------------------------\n");
     // printf("aux = %d, decoded = %s\n", aux, decoded);
     
-  }while(!feof(f));
+  }while(i < bufferLen && (!feof(f)));
 
   return decoded;
 }
@@ -360,15 +369,101 @@ int *decodeBinaryString(char *bin, int fileLen) {
 
 void EI2File(ENCODED_IMAGE **img, FILE *f, int len) {
   int i;
-  char *message = NULL;
+  unsigned char *buffer = NULL;
+  int bufferLen = 0;
   BINARY_ENCODING *encodedQts = NULL;
   BINARY_ENCODING *encodedVals = NULL;
   char *auxMessage = NULL;
-   
+  int messageLen = 0;
+  printf("len: %d\n", len);
+  
   for (i = 0; i < len; i++) {
+    // printf("encoder:373\n");
     encodedQts = coeficientCodification(img[i]->qtds, img[i]->len);
+    // printf("encoder:375\n");
     encodedVals = coeficientCodification(img[i]->info, img[i]->len);
     
+   
+    //write qtds
+    // printf("encoder:380\n");
+    auxMessage = encoded2FullMessage(encodedQts, img[i]->len);
+    // printf("encoder:382\n");
+    messageLen = (int)strlen(auxMessage);
+    // printf("QTDS - %d: messageLen = %d\n", i, messageLen);
+    fwrite(&messageLen, sizeof(int), 1, f);
+    // printf("encoder:385\n");
+    bufferLen = 0;
+    buffer = message2Buffer(auxMessage, &bufferLen);
+    // printf("QTDS - %d: bufferLen = %d\n", i, bufferLen);
+    // printf("encoder:388\n");
+    fwrite(&bufferLen, sizeof(int), 1, f);
+    // printf("encoder:390\n");
+    fwrite(&buffer, sizeof(unsigned char), bufferLen, f);
+    // printf("encoder:392\n");
+
+    //clear memory for writing info array
+    free(buffer); buffer = NULL;
+    free(auxMessage); auxMessage = NULL;
+    printf("QTDS - ftell(f): %d\n",(int)ftell(f));
+    //write info
+    // printf("encoded:399\n");
+    auxMessage = encoded2FullMessage(encodedVals, img[i]->len);
+    // printf("encoded:401\n");
+    messageLen = (int)strlen(auxMessage);
+    // printf("INFO - %d: messageLen = %d\n", i, messageLen);
+    fwrite(&messageLen, sizeof(int), 1, f);
+    // printf("encoded:404\n");
+    bufferLen = 0;
+    buffer = message2Buffer(auxMessage, &bufferLen);
+    // printf("INFO - %d: bufferLen = %d\n", i, bufferLen);
+    // printf("encoded:407\n");
+    fwrite(&bufferLen, sizeof(int), 1, f);
+    // printf("encoded:409\n");
+    fwrite(&buffer, sizeof(unsigned char), bufferLen, f);
+    // printf("encoded:411\n");
+    printf("INFO - ftell(f): %d\n",(int)ftell(f));
+    
+    // reset memory for next iteration
+    free(buffer);
+    free(auxMessage);
+
+    free(encodedQts->code);
+    free(encodedQts);
+    free(encodedVals->code);
+    free(encodedVals);
+
+
+  }
+}
+
+
+void File2EI(ENCODED_IMAGE **img, FILE *f, int len){
+  int i;
+  int msgLen = 0, bufferLen = 0;
+  char *bitsString = NULL;
+
+  for(i = 0; i < len; i++){
+
+    //leitura do vetor de qtds
+    fread(&msgLen, sizeof(int), 1, f);
+    fread(&bufferLen, sizeof(int),1, f);
+    bitsString = file2Message(f, msgLen, bufferLen);
+    img[i]->qtds = decodeBinaryString(bitsString, msgLen);
+
+    bufferLen = 0;
+    msgLen = 0;
+    free(bitsString);bitsString = NULL;
+
+    //leitura do vetor info
+    fread(&msgLen, sizeof(int), 1, f);
+    fread(&bufferLen, sizeof(int),1, f);
+    bitsString = file2Message(f, msgLen, bufferLen);
+    img[i]->info = decodeBinaryString(bitsString, msgLen);
+
+
+    bufferLen = 0;
+    msgLen = 0;
+    free(bitsString);bitsString = NULL;
   }
 }
 

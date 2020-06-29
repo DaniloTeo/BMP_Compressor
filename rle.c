@@ -6,9 +6,6 @@
 #include "zigzag.h"
 #include "rle.h"
 
-
-
-
 ENCODED_IMAGE *initializeEncoded(void){
 	ENCODED_IMAGE *img = (ENCODED_IMAGE *) malloc(sizeof(ENCODED_IMAGE));
 	img->info = NULL;

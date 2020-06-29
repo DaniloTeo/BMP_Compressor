@@ -163,6 +163,7 @@ void getDCPrefix (BINARY_ENCODING *obj, char category) {
 }
 
 void valueEncoding (BINARY_ENCODING *obj) {
+  printf("CAT = %c, BASE = %d, LEN = %d, MANTISSA = %d, VAL = %d, CODE = %s\n", obj->cat, obj->catBaseVal, obj->len, obj->mantissa, obj->val, obj->code);
   if (obj->val == 0) return;
   int c, d, count, n;
   char *p;

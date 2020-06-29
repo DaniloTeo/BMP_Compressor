@@ -1,0 +1,1921 @@
+Opening Imagens/favicon.bmp file..
+File opened!
+Reading File Header...
+Magic Number of File: 19778
+Size of File: 1078
+Reserved Var 1: 0
+Reserved Var 2: 0
+Offset to Bitmap Data: 54
+-----+-----+-----+-----+-----+-----+
+Reading Image Header...
+Size of Info Header: 40
+Width of Image: 16
+Height of Image: 16
+No of Color Planes: 1
+No of Bits per Pixel: 32
+Type of Compression to Use: 0
+Size of Image Data: 0
+X Pixels per Meter: 3780
+Y Pixels per Meter: 3780
+No of Colors Used: 0
+No of Important Colors: 0
+-----+-----+-----+-----+-----+-----+
+Loading BGR Image components...
+Image loaded!
+Applying RGB --> YCbCr Conversion
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 149.68 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 
+29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 149.68 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 76.24 29.07 178.76 225.93 
+76.24 29.07 178.76 225.93 76.24 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 225.93 105.31 178.76 255.00 
+Applying DCT to YCbCr Components...
+DCT
+1160.66 -138.60 -0.41 -252.54 -61.23 179.45 14.42 33.77 1220.43 -113.87 4.39 -267.76 47.75 157.92 -32.39 35.58 
+-173.73 21.80 0.32 21.88 -390.65 -28.09 -11.33 -19.56 -206.26 -10.63 3.45 -39.13 -354.56 -19.47 -25.45 -47.35 
+110.67 69.74 0.22 120.82 -78.06 -71.56 -7.80 13.39 78.33 56.36 -2.37 129.05 -137.04 -59.91 17.53 12.41 
+-39.11 -45.17 -0.57 -42.91 16.70 24.76 20.00 -20.81 18.32 12.07 -6.09 64.78 -47.01 9.55 44.92 28.24 
+-13.16 -6.71 0.41 -48.32 104.33 31.79 -14.42 16.04 -72.93 -31.44 -4.39 -33.11 -4.65 53.32 32.39 14.22 
+34.70 9.51 0.11 8.87 49.07 -2.99 -3.98 8.45 23.28 -1.88 1.21 -12.55 61.74 0.03 -8.94 -1.31 
+-31.59 -21.63 -0.54 2.26 -80.59 -4.77 18.84 -22.90 46.50 10.68 5.73 -17.62 61.80 -32.90 -42.31 -20.54 
+17.02 37.98 0.48 36.18 -45.56 -22.15 -16.95 15.06 -31.67 -10.55 5.16 -55.12 8.45 -9.26 -38.08 -26.52 
+1160.66 -138.60 -0.41 -252.54 -61.23 179.45 14.42 33.77 1220.43 -113.87 4.39 -267.76 47.75 157.92 -32.39 35.58 
+-173.73 21.80 0.32 21.88 -390.65 -28.09 -11.33 -19.56 -206.26 -10.63 3.45 -39.13 -354.56 -19.47 -25.45 -47.35 
+110.67 69.74 0.22 120.82 -78.06 -71.56 -7.80 13.39 78.33 56.36 -2.37 129.05 -137.04 -59.91 17.53 12.41 
+-39.11 -45.17 -0.57 -42.91 16.70 24.76 20.00 -20.81 18.32 12.07 -6.09 64.78 -47.01 9.55 44.92 28.24 
+-13.16 -6.71 0.41 -48.32 104.33 31.79 -14.42 16.04 -72.93 -31.44 -4.39 -33.11 -4.65 53.32 32.39 14.22 
+34.70 9.51 0.11 8.87 49.07 -2.99 -3.98 8.45 23.28 -1.88 1.21 -12.55 61.74 0.03 -8.94 -1.31 
+-31.59 -21.63 -0.54 2.26 -80.59 -4.77 18.84 -22.90 46.50 10.68 5.73 -17.62 61.80 -32.90 -42.31 -20.54 
+17.02 37.98 0.48 36.18 -45.56 -22.15 -16.95 15.06 -31.67 -10.55 5.16 -55.12 8.45 -9.26 -38.08 -26.52 
+QUANT
+73.00 -13.00 -0.00 -16.00 -3.00 4.00 0.00 1.00 76.00 -10.00 0.00 -17.00 2.00 4.00 -1.00 1.00 
+-14.00 2.00 0.00 1.00 -15.00 -0.00 -0.00 -0.00 -17.00 -1.00 0.00 -2.00 -14.00 -0.00 -0.00 -1.00 
+8.00 5.00 0.00 5.00 -2.00 -1.00 -0.00 0.00 6.00 4.00 -0.00 5.00 -3.00 -1.00 0.00 0.00 
+-3.00 -3.00 -0.00 -1.00 0.00 0.00 0.00 -0.00 1.00 1.00 -0.00 2.00 -1.00 0.00 1.00 0.00 
+-1.00 -0.00 0.00 -1.00 2.00 0.00 -0.00 0.00 -4.00 -1.00 -0.00 -1.00 -0.00 0.00 0.00 0.00 
+1.00 0.00 0.00 0.00 1.00 -0.00 -0.00 0.00 1.00 -0.00 0.00 -0.00 1.00 0.00 -0.00 -0.00 
+-1.00 -0.00 -0.00 0.00 -1.00 -0.00 0.00 -0.00 1.00 0.00 0.00 -0.00 1.00 -0.00 -0.00 -0.00 
+0.00 0.00 0.00 0.00 -0.00 -0.00 -0.00 0.00 -0.00 -0.00 0.00 -1.00 0.00 -0.00 -0.00 -0.00 
+73.00 -13.00 -0.00 -16.00 -3.00 4.00 0.00 1.00 76.00 -10.00 0.00 -17.00 2.00 4.00 -1.00 1.00 
+-14.00 2.00 0.00 1.00 -15.00 -0.00 -0.00 -0.00 -17.00 -1.00 0.00 -2.00 -14.00 -0.00 -0.00 -1.00 
+8.00 5.00 0.00 5.00 -2.00 -1.00 -0.00 0.00 6.00 4.00 -0.00 5.00 -3.00 -1.00 0.00 0.00 
+-3.00 -3.00 -0.00 -1.00 0.00 0.00 0.00 -0.00 1.00 1.00 -0.00 2.00 -1.00 0.00 1.00 0.00 
+-1.00 -0.00 0.00 -1.00 2.00 0.00 -0.00 0.00 -4.00 -1.00 -0.00 -1.00 -0.00 0.00 0.00 0.00 
+1.00 0.00 0.00 0.00 1.00 -0.00 -0.00 0.00 1.00 -0.00 0.00 -0.00 1.00 0.00 -0.00 -0.00 
+-1.00 -0.00 -0.00 0.00 -1.00 -0.00 0.00 -0.00 1.00 0.00 0.00 -0.00 1.00 -0.00 -0.00 -0.00 
+0.00 0.00 0.00 0.00 -0.00 -0.00 -0.00 0.00 -0.00 -0.00 0.00 -1.00 0.00 -0.00 -0.00 -0.00 
+Applying ZigZagWalk...
+Appyling RLE Encoding....
+73 -13 -14 8 2 0 -16 0 5 -3 0 1 5 0 -1 
+1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 
+
+-3 4 -15 -2 0 1 0 -1 0 
+1 1 1 1 2 1 1 1 7 
+
+76 -10 -17 6 -1 0 -17 0 4 1 0 -2 5 0 2 
+1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 
+
+2 4 -14 -3 0 -1 1 0 -1 0 -1 0 1 0 
+1 1 1 1 1 1 1 1 2 2 1 1 1 1 
+
+-1 0 1 -1 0 -1 0 
+1 1 1 1 2 1 9 
+
+2 0 1 -1 0 
+1 1 1 1 12 
+
+-4 -1 1 0 -1 0 -1 
+1 1 2 2 1 8 1 
+
+0 1 0 
+2 2 12 
+
+73 -13 -14 8 2 0 -16 0 5 -3 0 1 5 0 -1 
+1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 
+
+-3 4 -15 -2 0 1 0 -1 0 
+1 1 1 1 2 1 1 1 7 
+
+76 -10 -17 6 -1 0 -17 0 4 1 0 -2 5 0 2 
+1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 
+
+2 4 -14 -3 0 -1 1 0 -1 0 -1 0 1 0 
+1 1 1 1 1 1 1 1 2 2 1 1 1 1 
+
+-1 0 1 -1 0 -1 0 
+1 1 1 1 2 1 9 
+
+2 0 1 -1 0 
+1 1 1 1 12 
+
+-4 -1 1 0 -1 0 -1 
+1 1 2 2 1 8 1 
+
+0 1 0 
+2 2 12 
+
+Writing binary file....
+bitmap:79
+bitmap:81
+bitmap:84
+ftell(out): 54
+len: 16
+i = 0
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 7, BASE = 64, LEN = 12, MANTISSA = 7, VAL = 73, CODE = 11110
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -13, CODE = 101
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 8, CODE = 101
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -16, CODE = 110
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 70
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 89
+i = 1
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -15, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 102
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 115
+i = 2
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 7, BASE = 64, LEN = 12, MANTISSA = 7, VAL = 76, CODE = 11110
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -10, CODE = 101
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -17, CODE = 110
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -17, CODE = 110
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 131
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 149
+i = 3
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 165
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 181
+i = 4
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 9, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 193
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 205
+i = 5
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 12, CODE = 101
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 216
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 227
+i = 6
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 8, CODE = 101
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 240
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 252
+i = 7
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 12, CODE = 101
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 263
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 273
+i = 8
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 7, BASE = 64, LEN = 12, MANTISSA = 7, VAL = 73, CODE = 11110
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -13, CODE = 101
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 8, CODE = 101
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -16, CODE = 110
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 289
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 308
+i = 9
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -15, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 321
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 334
+i = 10
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 7, BASE = 64, LEN = 12, MANTISSA = 7, VAL = 76, CODE = 11110
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -10, CODE = 101
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -17, CODE = 110
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -17, CODE = 110
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 350
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 368
+i = 11
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 384
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 400
+i = 12
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 9, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 412
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 424
+i = 13
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 12, CODE = 101
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 435
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 446
+i = 14
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 8, CODE = 101
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 459
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 471
+i = 15
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 12, CODE = 101
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 482
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 492
+bitmap:86
+len: 16
+i = 0
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 506
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 520
+i = 1
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 535
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 549
+i = 2
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 564
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 578
+i = 3
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 593
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 607
+i = 4
+encoder:11
+encoder:13
+CAT = 5, BASE = 16, LEN = 8, MANTISSA = 5, VAL = 16, CODE = 110
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 616
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 625
+i = 5
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 637
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 648
+i = 6
+encoder:11
+encoder:13
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 15, CODE = 101
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 658
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 667
+i = 7
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 679
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 690
+i = 8
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 704
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 718
+i = 9
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 733
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 747
+i = 10
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 762
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 776
+i = 11
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 791
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 805
+i = 12
+encoder:11
+encoder:13
+CAT = 5, BASE = 16, LEN = 8, MANTISSA = 5, VAL = 16, CODE = 110
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 814
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 823
+i = 13
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 835
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 846
+i = 14
+encoder:11
+encoder:13
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 15, CODE = 101
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 856
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 865
+i = 15
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 7, CODE = 00
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 877
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 888
+bitmap:88
+len: 16
+i = 0
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -12, CODE = 101
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -18, CODE = 110
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -6, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 904
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 921
+i = 1
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 5, BASE = 16, LEN = 8, MANTISSA = 5, VAL = 16, CODE = 110
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 936
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 952
+i = 2
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -11, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -6, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -7, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 968
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 986
+i = 3
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 15, CODE = 101
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -4, CODE = 00
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1002
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1018
+i = 4
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1031
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1043
+i = 5
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 14, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1053
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1063
+i = 6
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1076
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1089
+i = 7
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 9, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1110
+i = 8
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -12, CODE = 101
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 5, BASE = -31, LEN = 8, MANTISSA = 5, VAL = -18, CODE = 110
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -6, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1126
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1143
+i = 9
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 5, BASE = 16, LEN = 8, MANTISSA = 5, VAL = 16, CODE = 110
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1158
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1174
+i = 10
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -11, CODE = 101
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -6, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = -15, LEN = 7, MANTISSA = 4, VAL = -14, CODE = 101
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -7, CODE = 00
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1190
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1208
+i = 11
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 15, CODE = 101
+CAT = 3, BASE = -7, LEN = 5, MANTISSA = 3, VAL = -4, CODE = 00
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -3, CODE = 100
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = -3, LEN = 5, MANTISSA = 2, VAL = -2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1224
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1240
+i = 12
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 4, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 6, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+encoder:11
+encoder:13
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 3, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1253
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1265
+i = 13
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 14, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1275
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1285
+i = 14
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+encoder:11
+encoder:13
+CAT = 2, BASE = 2, LEN = 5, MANTISSA = 2, VAL = 2, CODE = 100
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = -1, LEN = 4, MANTISSA = 1, VAL = -1, CODE = 011
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1298
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1311
+i = 15
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 3, BASE = 4, LEN = 5, MANTISSA = 3, VAL = 5, CODE = 00
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 4, BASE = 8, LEN = 7, MANTISSA = 4, VAL = 9, CODE = 101
+encoder:11
+encoder:13
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+CAT = 1, BASE = 1, LEN = 4, MANTISSA = 1, VAL = 1, CODE = 011
+CAT = 0, BASE = 0, LEN = 3, MANTISSA = 0, VAL = 0, CODE = 010
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+QTDS - ftell(f): 1322
+encoded:194
+encoded:198
+encoded:201
+encoded:205
+encoded:216
+encoded:231
+INFO - ftell(f): 1332
+bitmap:90
+Applying deZigZag...
+Applying IDCT to BGR Components...
+Applying YCbCr --> RGB Conversion
+Writing output file to disk...

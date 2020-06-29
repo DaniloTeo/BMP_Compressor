@@ -64,18 +64,19 @@ int main(int argc, char *argv[]){
 	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
 	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
 
-  	printf("Writing binary file....\n");
-  	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
+  	// printf("Writing binary file....\n");
+  	// writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------
 
 	// decode
-	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(4*4));
+	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
 
 	Yzz = decodeImage(Y_rle, zigzag_len);
 	Cbzz = decodeImage(Cb_rle, zigzag_len);
 	Crzz = decodeImage(Cr_rle, zigzag_len);
+
 
 
 

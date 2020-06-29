@@ -82,11 +82,11 @@ void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAG
 	writeBMPInfoHeader(out, infoHeader);
   printf("bitmap:84\n");
   printf("ftell(out): %d\n",(int)ftell(out));
-  EI2File(Y, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
+  EI2File(Y, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
   printf("bitmap:86\n");
-  EI2File(Cb, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
+  EI2File(Cb, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
   printf("bitmap:88\n");
-  EI2File(Cr, out, (infoHeader->biHeight * infoHeader->biWidth) / 16);
+  EI2File(Cr, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
   printf("bitmap:90\n");
 
   fclose(out);
@@ -96,7 +96,7 @@ void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I , ENCODED_IMAGE
   F = fopen("out.xbl", "rb");
   leituraFileHeader(F, H);
   leituraInfoHeader(F, I);
-  int nOfRLEs = (I->biHeight * I->biWidth) / 16;
+  int nOfRLEs = (I->biHeight * I->biWidth) / (8*8);
 
   File2EI(Y, F, nOfRLEs);
   File2EI(Cb, F, nOfRLEs);

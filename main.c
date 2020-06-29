@@ -84,6 +84,11 @@ int main(int argc, char *argv[]){
 	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, Yzz_len);
 	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
 	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
+<<<<<<< HEAD
+
+  	// printf("Writing binary file....\n");
+  	// writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
+=======
   for (i = 0; i < infoHeader.biWidth * infoHeader.biHeight / 16; i++) {
     printVetorInt(Y_rle[i]->info, Y_rle[i]->len);
     printVetorInt(Y_rle[i]->qtds, Y_rle[i]->len);
@@ -91,16 +96,18 @@ int main(int argc, char *argv[]){
   }
   	printf("Writing binary file....\n");
   	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
+>>>>>>> master
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------
 
 	// decode
-	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(4*4));
+	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
 
 	Yzz = decodeImage(Y_rle, zigzag_len);
 	Cbzz = decodeImage(Cb_rle, zigzag_len);
 	Crzz = decodeImage(Cr_rle, zigzag_len);
+
 
 
 

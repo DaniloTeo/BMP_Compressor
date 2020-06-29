@@ -9,7 +9,7 @@ EXE    = BMP_compressor
 CC      = gcc
 CFLAGS  =
 LIBPATH = -L.
-LDFLAGS = -o $(EXE) $(LIBPATH)
+LDFLAGS = -o $(EXE) $(LIBPATH) -g
 CFDEBUG = -ansi -pedantic -Wall -g -DDEBUG $(LDFLAGS)
 RM      = /bin/rm -f
 

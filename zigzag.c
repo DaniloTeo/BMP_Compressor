@@ -82,7 +82,7 @@ double * zigzagwalk(double **img, int maxDimension, int startHeight, int startWi
 
 double ** zigzagImage(double **img, int width, int height, int *n_vet){
 	int i, j, k = 0;
-	int maxDimension = 4;
+	int maxDimension = 8;
 	double **imageVector = (double **)malloc(sizeof(double *) * (width * height)/(maxDimension*maxDimension));
 
 	// printf("width: %d; height: %d\n\n", width, height);
@@ -148,7 +148,7 @@ void deZigZag(double **img, double *vet, int maxDimension, int startHeight, int 
 double **deZigZagImage(double **imageVector, int n_vet, int width, int height){
 	int i, j;
 	int k = n_vet;
-	int maxDimension = 4;
+	int maxDimension = 8;
 	double **newImg = (double **) malloc(sizeof(double*) * (height));
 	for(i = 0; i < height; i++){
 		newImg[i] = (double *) malloc(sizeof(double) * (width));

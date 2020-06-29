@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include "bitmap.h"
 #include "rle.h"
-#include "encoder.h"
 
 /*Start of Bitmap Aux functions *******************************************************/
 void leituraFileHeader(FILE *F, BMPFILEHEADER *H){
@@ -73,37 +72,32 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 	printf("No of Important Colors: %u\n", h->biClrImportant);
 	printf("-----+-----+-----+-----+-----+-----+\n");
 }
-void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE **Cr, BMPINFOHEADER *infoHeader){
+
+void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE *Y, ENCODED_IMAGE *Cb, ENCODED_IMAGE *Cr, BMPINFOHEADER *infoHeader){
   int i = 0;
-  	printf("bitmap:79\n");
 	FILE *out = fopen("out.xbl", "wb");
-	printf("bitmap:81\n");
+
 	writeBMPFileHeader(out, fileHeader);
 	writeBMPInfoHeader(out, infoHeader);
-  printf("bitmap:84\n");
-  printf("ftell(out): %d\n",(int)ftell(out));
-  EI2File(Y, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:86\n");
-  EI2File(Cb, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:88\n");
-  EI2File(Cr, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:90\n");
+
+	fwrite(&(Y->len), sizeof(int), 1, out);
+	fwrite(&(Cb->len), sizeof(int), 1, out);
+	fwrite(&(Cr->len), sizeof(int), 1, out);
+
+  // for (i = 0; i < Y->len; i++) {
+  //   fwrite(&(Y->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Y->qtds[i]), sizeof(char), 1, out);
+  // }
+  // for (i = 0; i < Cb->len; i++) {
+  //   fwrite(&(Cb->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Cb->qtds[i]), sizeof(char), 1, out);
+  // }
+  // for (i = 0; i < Cr->len; i++) {
+  //   fwrite(&(Cr->info[i]), sizeof(char), 1, out);
+  //   fwrite(&(Cr->qtds[i]), sizeof(char), 1, out);
+  // }
 
   fclose(out);
-}
-
-void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I , ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE**Cr) {
-  F = fopen("out.xbl", "rb");
-  leituraFileHeader(F, H);
-  leituraInfoHeader(F, I);
-  int nOfRLEs = (I->biHeight * I->biWidth) / (8*8);
-
-  File2EI(Y, F, nOfRLEs);
-  File2EI(Cb, F, nOfRLEs);
-  File2EI(Cr, F, nOfRLEs);
-
-
-  fclose(F);
 }
 
 /*End of Bitmap Aux functions *******************************************************/

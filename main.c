@@ -5,11 +5,8 @@
 #include "DCT.h"
 #include "zigzag.h"
 #include "rle.h"
-#include "encoder.h"
-#include "quant.h"
 
 int main(int argc, char *argv[]){
-  int i,j;
 	// Alocando memoria pra arquivo
 	printf("Opening %s file..\n", argv[1]);
 	FILE *f = fopen(argv[1], "rb");
@@ -39,83 +36,53 @@ int main(int argc, char *argv[]){
 	double **Y = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
 	double **Cb = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
 	double **Cr = alocaMatrizDouble(infoHeader.biHeight, infoHeader.biWidth);
-  
+
 
 	printf("Applying RGB --> YCbCr Conversion\n");
 	RGB2YCbCr(R, G, B, infoHeader.biHeight, infoHeader.biWidth, Y, Cb, Cr);
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", Y[i][j]);
-		}
-		printf("\n");
-	}
+
 	//Aplicação da DCT
 	printf("Applying DCT to YCbCr Components...\n");
 	double **YAfterDCT = DCTImage(Y, infoHeader.biWidth, infoHeader.biHeight);
 	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
-	
-  double **YQuant = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  double **CbQuant = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  double **CrQuant = quantizeImageLuma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  
-  printf("DCT\n");
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", YAfterDCT[i][j]);
-		}
-		printf("\n");
-	}
-  printf("QUANT\n");
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", YQuant[i][j]);
-		}
-		printf("\n");
-	}
+
+	printf("Applying Quantization...\n");
+	// double **YQuantized = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CbQuantized = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	// double **CrQuantized = quantizeImageCroma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying ZigZagWalk...\n");
-	int Yzz_len = 0, Cbzz_len = 0, Crzz_len = 0;
-	double **Yzz = zigzagImage(YQuant, infoHeader.biWidth, infoHeader.biHeight, &Yzz_len);
-	double **Cbzz = zigzagImage(CbQuant, infoHeader.biWidth, infoHeader.biHeight, &Cbzz_len);
-	double **Crzz = zigzagImage(CrQuant, infoHeader.biWidth, infoHeader.biHeight, &Crzz_len);
+	double *Yzz = zigzagwalk(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double *Cbzz = zigzagwalk(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
+	double *Crzz = zigzagwalk(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
 	
 	printf("Appyling RLE Encoding....\n");
-	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, Yzz_len);
-	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
-	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
-<<<<<<< HEAD
+	ENCODED_IMAGE * Y_rle = encodeRLE(Yzz, (infoHeader.biWidth * infoHeader.biHeight));
+	ENCODED_IMAGE * Cb_rle = encodeRLE(Cbzz, (infoHeader.biWidth * infoHeader.biHeight));
+	ENCODED_IMAGE * Cr_rle = encodeRLE(Crzz, (infoHeader.biWidth * infoHeader.biHeight));
 
-  	// printf("Writing binary file....\n");
-  	// writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
-=======
-  for (i = 0; i < infoHeader.biWidth * infoHeader.biHeight / 16; i++) {
-    printVetorInt(Y_rle[i]->info, Y_rle[i]->len);
-    printVetorInt(Y_rle[i]->qtds, Y_rle[i]->len);
-    printf("\n");
-  }
-  	printf("Writing binary file....\n");
-  	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
->>>>>>> master
+  writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
 
 	//Essa parte fica no descompressor --------------------------------------------------------
 
 	// decode
-	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
 
-	Yzz = decodeImage(Y_rle, zigzag_len);
-	Cbzz = decodeImage(Cb_rle, zigzag_len);
-	Crzz = decodeImage(Cr_rle, zigzag_len);
-
+	decodeRLE(Y_rle, Yzz, (infoHeader.biWidth * infoHeader.biHeight));
+	decodeRLE(Cb_rle, Cbzz, (infoHeader.biWidth * infoHeader.biHeight));
+	decodeRLE(Cr_rle, Crzz, (infoHeader.biWidth * infoHeader.biHeight));
 
 
 
 	//dezigzag
 	printf("Applying deZigZag...\n");
-	YAfterDCT = deZigZagImage(Yzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
-	CbAfterDCT = deZigZagImage(Cbzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
-	CrAfterDCT = deZigZagImage(Crzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(YAfterDCT, Yzz, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(CbAfterDCT, Cbzz, infoHeader.biWidth, infoHeader.biHeight);
+	deZigZag(CrAfterDCT, Crzz, infoHeader.biWidth, infoHeader.biHeight);
+
+
+	// Implementar (Des)Quantização
 
 
 	printf("Applying IDCT to BGR Components...\n");
@@ -135,19 +102,16 @@ int main(int argc, char *argv[]){
 
 	// Liberacao de Memoria
 
-	freeVetorEncoded(Y_rle, zigzag_len);
-	freeVetorEncoded(Cb_rle, zigzag_len);
-	freeVetorEncoded(Cr_rle, zigzag_len);
+	freeEncoded(Y_rle);
+	freeEncoded(Cb_rle);
+	freeEncoded(Cr_rle);
 
 
 
 	// Liberacao dos vetores do zizag
-  // int i;
-	for(i = 0; i < zigzag_len; i++){
-		free(Yzz[i]);
-		free(Cbzz[i]);
-		free(Crzz[i]);
-	}
+	free(Yzz);
+	free(Cbzz);
+	free(Crzz);
 
 	//Liberacao dos vetores quantizados
 	// freeDoubleMatrix(YQuantized, infoHeader.biHeight);

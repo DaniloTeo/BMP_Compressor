@@ -12,8 +12,8 @@ ENCODE_IMAGE
 		int len: tamanho de ambos os vetores acima
 */
 typedef struct{
-	int *info;
-	int *qtds;
+	char *info;
+	char *qtds;
 	int len;
 
 } ENCODED_IMAGE;
@@ -27,7 +27,7 @@ PARAMETROS:
 RETORNA:
 	ENCODED_IMAGE *img: struct devidamente inicializada
 */
-ENCODED_IMAGE *initializeEncoded(void);
+ENCODED_IMAGE *initializeEncoded(int tam_vet);
 
 /*
 void freeEncoded: libera a memoria alocada para um elemento ENCODED_IMAGE
@@ -63,12 +63,17 @@ void encodeRLE: executa o RUN LENGHT ENCODING sobre um vetor de double.
 PARAMETROS:
 	double * vet: vetor de doubles a ser comprimido;
 	int n: comprimento do vetor vet;
-RETORNA:	
 	ENCODED_IMAGE *out: elemento de output do vetor comprimido
+RETORNA:	
+	[retorno por derreferência]
 
 */
-ENCODED_IMAGE * encodeRLE(double *vet, int n);	
+ENCODED_IMAGE * encodeRLE(double *vet, int n);
 
+/*
+double decodeRLE: função inversa da função encodeRLE
+*/
+void decodeRLE(ENCODED_IMAGE *input, double * output, int len);
 
 /*
 ENCODED_IMAGE **encodeImage: função que itera sobre um vetor de double * e executa o RUN-LENGTH
@@ -80,11 +85,6 @@ RETORNA:
 	ENCODED_IMAGE ** output: vetor de ENCODED_IMAGE * 
 */
 ENCODED_IMAGE **encodeImage(double **img, int length);
-
-/*
-double decodeRLE: função inversa da função encodeRLE
-*/
-double * decodeRLE(ENCODED_IMAGE *input);
 
 /*
 double ** decodeImage: função inversa da função encodeImage

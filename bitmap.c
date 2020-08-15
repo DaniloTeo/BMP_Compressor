@@ -92,22 +92,25 @@ void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAG
   fclose(out);
 }
 
-void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I , ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE**Cr) {
+void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I , ENCODED_IMAGE ***Y, ENCODED_IMAGE ***Cb, ENCODED_IMAGE ***Cr) {
   printf("Opening input file...\n");
   F = fopen("out.xbl", "rb");
   	printf("Reading fileHeader...\n");
 leituraFileHeader(F, H);
   	printf("Reading infoHeader...\n");
   leituraInfoHeader(F, I);
-  int nOfRLEs = (I->biHeight * I->biWidth) / (8*8);
+  int nOfRLEs = ((I->biHeight * I->biWidth) / (8*8));
 
   	printf("Reading Y matrix from disk...\n");
-  Y = File2RLE(F, nOfRLEs);
+  (*Y) = File2RLE(F, nOfRLEs);
+  if(Y == NULL || *Y == NULL) printf("FAIL");
   	printf("Reading Cb matrix from disk...\n");
-  Cb = File2RLE(F, nOfRLEs);
+  (*Cb) = File2RLE(F, nOfRLEs);
+  if(Cb == NULL || *Cb == NULL) printf("FAIL");
   	printf("Reading Cr matrix from disk...\n");
-  Cr = File2RLE(F, nOfRLEs);
-
+   (*Cr) = File2RLE(F, nOfRLEs);
+  if(Cr == NULL || *Cr == NULL) printf("FAIL");
+ 
 
 	printf("File read from disk!!\n");
   fclose(F);
@@ -135,7 +138,8 @@ void writeBMPFile(unsigned char **B, unsigned char **G, unsigned char **R, BMPFI
 	// Escreve os cabeçalhos
 	writeBMPFileHeader(out, fileHeader);
 	writeBMPInfoHeader(out, infoHeader);
-	
+	printf("141\n");
+	printf("B[0][0]: %d\n", B[0][0]);
 	// Escreve os dados da imagem
 	for(i = 0; i < lin; i++){
 		for(j = 0; j < col; j++){

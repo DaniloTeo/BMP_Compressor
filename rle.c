@@ -103,14 +103,11 @@ double * decodeRLE(ENCODED_IMAGE *input){
 	int i,j = 0;
 	int decomp_len = 0;
 	//descobir o tamanho do vetor original
-	printf("106");
 	for(i = 0; i < input->len; i++){
 		decomp_len += input->qtds[i];
 	}
-	printf("110");
 	double *output = (double *) malloc(sizeof(double) * decomp_len);
 
-	printf("113");
 	for(i = 0; i < input->len; i++){
 		while(input->qtds[i] > 0){
 			output[j] = (double)input->info[i];
@@ -118,7 +115,6 @@ double * decodeRLE(ENCODED_IMAGE *input){
 			j++;
 		}
 	}
-	printf("121");
 
 	return output;
 }
@@ -126,11 +122,8 @@ double * decodeRLE(ENCODED_IMAGE *input){
 
 double **decodeImage(ENCODED_IMAGE **encoded, int length){
 	int i;
-	printf("length: %d\n", length);
 	double **out = (double **) malloc(sizeof(double *) * length);
-	if(out == NULL) printf("aaaaaaaaaaaaaaaaaaah\n\n");
 	for(i = 0; i < length; i++){
-		printf("133");
 		out[i] = decodeRLE(encoded[i]);
 	}
 
@@ -155,7 +148,7 @@ ENCODED_IMAGE ** File2RLE(FILE *buffer, int len){
 	for(i = 0; i < len; i++){
 		img[i] = initializeEncoded();
 		fread(&(img[i]->len),sizeof(int), 1, buffer);
-
+		// printf("img[%d]->len: %d\n", i, img[i]->len);
 		img[i]->info = (int *) malloc(img[i]->len * sizeof(int));
 		img[i]->qtds = (int *) malloc(img[i]->len * sizeof(int));
 
@@ -165,7 +158,6 @@ ENCODED_IMAGE ** File2RLE(FILE *buffer, int len){
 
 	return img;
 }
-
 
 
 

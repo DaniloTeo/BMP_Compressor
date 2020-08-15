@@ -42,13 +42,7 @@ int main(int argc, char *argv[]){
 
 	printf("Applying RGB --> YCbCr Conversion\n");
 	RGB2YCbCr(R, G, B, infoHeader.biHeight, infoHeader.biWidth, Y, Cb, Cr);
-//   for (i = 0; i < infoHeader.biHeight; i++){
-// 		for(j = 0; j < infoHeader.biWidth; j++){
-// 			printf("%.2lf ", Y[i][j]);
-// 		}
-// 		printf("\n");
-// 	}
-	//Aplicação da DCT
+
 	printf("Applying DCT to YCbCr Components...\n");
 	double **YAfterDCT = DCTImage(Y, infoHeader.biWidth, infoHeader.biHeight);
 	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
@@ -59,20 +53,6 @@ int main(int argc, char *argv[]){
   double **CbQuant = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
   double **CrQuant = quantizeImageLuma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
   
-  /*printf("DCT\n");
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", YAfterDCT[i][j]);
-		}
-		printf("\n");
-	}
-  printf("QUANT\n");
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", YQuant[i][j]);
-		}
-		printf("\n");
-	}*/
 
 	printf("Applying ZigZagWalk...\n");
 	int Yzz_len = 0, Cbzz_len = 0, Crzz_len = 0;
@@ -132,10 +112,12 @@ int main(int argc, char *argv[]){
 	f = NULL;
 	ENCODED_IMAGE **Y_in = NULL, **Cb_in = NULL, **Cr_in = NULL;
 
-	readENCODEDFile(f, &fileHeader, &infoHeader, Y_in, Cb_in, Cr_in);
+	readENCODEDFile(f, &fileHeader, &infoHeader, &Y_in, &Cb_in, &Cr_in);
 
 	// decode
 	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
+
+
 
 	printf("Decoding matrixes into ZigZag Array...\n");
 	double **Yzz_in = decodeImage(Y_in, zigzag_len);
@@ -145,7 +127,6 @@ int main(int argc, char *argv[]){
 
 
 
-	//dezigzag
 	printf("Applying deZigZag...\n");
 	double **YAfterdeZZ_in = deZigZagImage(Yzz_in, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
 	double **CbAfterdeZZ_in = deZigZagImage(Cbzz_in, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
@@ -158,17 +139,15 @@ int main(int argc, char *argv[]){
 	double **CrAfterIDCT = IDCTImage(CrAfterdeZZ_in, infoHeader.biWidth, infoHeader.biHeight);
 
 	printf("Applying YCbCr --> RGB Conversion\n");
-	
 	unsigned char **B_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	unsigned char **G_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	unsigned char **R_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
 	
+	
 	YCbCr2RGB(YAfterIDCT, CbAfterIDCT, CrAfterIDCT,  infoHeader.biHeight, infoHeader.biWidth, R_in, G_in, B_in);
 
-
-	// Escreve output
 	printf("Writing output file to disk...\n");
-	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
+	writeBMPFile(B_in, G_in, R_in, &fileHeader, &infoHeader);
 	
 
 

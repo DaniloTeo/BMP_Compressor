@@ -138,8 +138,6 @@ void writeBMPFile(unsigned char **B, unsigned char **G, unsigned char **R, BMPFI
 	// Escreve os cabeçalhos
 	writeBMPFileHeader(out, fileHeader);
 	writeBMPInfoHeader(out, infoHeader);
-	printf("141\n");
-	printf("B[0][0]: %d\n", B[0][0]);
 	// Escreve os dados da imagem
 	for(i = 0; i < lin; i++){
 		for(j = 0; j < col; j++){

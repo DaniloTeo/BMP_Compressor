@@ -48,30 +48,20 @@ int main(int argc, char *argv[]){
 	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 	
-	printf("Applying Quantization to YCbCr Components...\n");
-  double **YQuant = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  double **CbQuant = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  double **CrQuant = quantizeImageLuma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-  
+
 
 	printf("Applying ZigZagWalk...\n");
 	int Yzz_len = 0, Cbzz_len = 0, Crzz_len = 0;
-	double **Yzz = zigzagImage(YQuant, infoHeader.biWidth, infoHeader.biHeight, &Yzz_len);
-	double **Cbzz = zigzagImage(CbQuant, infoHeader.biWidth, infoHeader.biHeight, &Cbzz_len);
-	double **Crzz = zigzagImage(CrQuant, infoHeader.biWidth, infoHeader.biHeight, &Crzz_len);
+	double **Yzz = zigzagImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &Yzz_len);
+	double **Cbzz = zigzagImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &Cbzz_len);
+	double **Crzz = zigzagImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight, &Crzz_len);
 	
 	printf("Appyling RLE Encoding....\n");
 	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, Yzz_len);
 	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
 	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
 
-  	// printf("Writing binary file....\n");
-  	// writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
-//   for (i = 0; i < infoHeader.biWidth * infoHeader.biHeight / 16; i++) {
-//     printVetorInt(Y_rle[i]->info, Y_rle[i]->len);
-//     printVetorInt(Y_rle[i]->qtds, Y_rle[i]->len);
-//     printf("\n");
-//   }
+  
   	printf("Writing binary file....\n");
   	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
@@ -86,11 +76,6 @@ int main(int argc, char *argv[]){
 	liberaMatrizUnChar(G,infoHeader.biHeight);
 	liberaMatrizUnChar(B,infoHeader.biHeight);
 
-
-	//Liberacao dos vetores quantizados
-	freeDoubleMatrix(YQuant, infoHeader.biHeight);
-	freeDoubleMatrix(CbQuant, infoHeader.biHeight);
-	freeDoubleMatrix(CrQuant, infoHeader.biHeight);
 
 	// Liberacao dos vetores pos-DCT
 	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);

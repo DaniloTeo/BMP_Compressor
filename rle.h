@@ -91,6 +91,7 @@ double ** decodeImage: função inversa da função encodeImage
 */
 double **decodeImage(ENCODED_IMAGE **encoded, int length);
 
-
+void RLE2File(ENCODED_IMAGE ** img, int len, FILE *buffer);
+ENCODED_IMAGE ** File2RLE(FILE *buffer, int len);
 
 #endif

@@ -5,7 +5,6 @@
 #include "DCT.h"
 #include "zigzag.h"
 #include "rle.h"
-#include "encoder.h"
 #include "quant.h"
 
 int main(int argc, char *argv[]){
@@ -43,23 +42,24 @@ int main(int argc, char *argv[]){
 
 	printf("Applying RGB --> YCbCr Conversion\n");
 	RGB2YCbCr(R, G, B, infoHeader.biHeight, infoHeader.biWidth, Y, Cb, Cr);
-  for (i = 0; i < infoHeader.biHeight; i++){
-		for(j = 0; j < infoHeader.biWidth; j++){
-			printf("%.2lf ", Y[i][j]);
-		}
-		printf("\n");
-	}
+//   for (i = 0; i < infoHeader.biHeight; i++){
+// 		for(j = 0; j < infoHeader.biWidth; j++){
+// 			printf("%.2lf ", Y[i][j]);
+// 		}
+// 		printf("\n");
+// 	}
 	//Aplicação da DCT
 	printf("Applying DCT to YCbCr Components...\n");
 	double **YAfterDCT = DCTImage(Y, infoHeader.biWidth, infoHeader.biHeight);
 	double **CbAfterDCT = DCTImage(Cb, infoHeader.biWidth, infoHeader.biHeight);
 	double **CrAfterDCT = DCTImage(Cr, infoHeader.biWidth, infoHeader.biHeight);
 	
+	printf("Applying Quantization to YCbCr Components...\n");
   double **YQuant = quantizeImageLuma(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
   double **CbQuant = quantizeImageCroma(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
   double **CrQuant = quantizeImageLuma(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
   
-  printf("DCT\n");
+  /*printf("DCT\n");
   for (i = 0; i < infoHeader.biHeight; i++){
 		for(j = 0; j < infoHeader.biWidth; j++){
 			printf("%.2lf ", YAfterDCT[i][j]);
@@ -72,7 +72,7 @@ int main(int argc, char *argv[]){
 			printf("%.2lf ", YQuant[i][j]);
 		}
 		printf("\n");
-	}
+	}*/
 
 	printf("Applying ZigZagWalk...\n");
 	int Yzz_len = 0, Cbzz_len = 0, Crzz_len = 0;
@@ -84,81 +84,18 @@ int main(int argc, char *argv[]){
 	ENCODED_IMAGE ** Y_rle = encodeImage(Yzz, Yzz_len);
 	ENCODED_IMAGE ** Cb_rle = encodeImage(Cbzz, Cbzz_len);
 	ENCODED_IMAGE ** Cr_rle = encodeImage(Crzz, Crzz_len);
-<<<<<<< HEAD
 
   	// printf("Writing binary file....\n");
   	// writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
-=======
-  for (i = 0; i < infoHeader.biWidth * infoHeader.biHeight / 16; i++) {
-    printVetorInt(Y_rle[i]->info, Y_rle[i]->len);
-    printVetorInt(Y_rle[i]->qtds, Y_rle[i]->len);
-    printf("\n");
-  }
+//   for (i = 0; i < infoHeader.biWidth * infoHeader.biHeight / 16; i++) {
+//     printVetorInt(Y_rle[i]->info, Y_rle[i]->len);
+//     printVetorInt(Y_rle[i]->qtds, Y_rle[i]->len);
+//     printf("\n");
+//   }
   	printf("Writing binary file....\n");
   	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
->>>>>>> master
 
-
-	//Essa parte fica no descompressor --------------------------------------------------------
-
-	// decode
-	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
-
-	Yzz = decodeImage(Y_rle, zigzag_len);
-	Cbzz = decodeImage(Cb_rle, zigzag_len);
-	Crzz = decodeImage(Cr_rle, zigzag_len);
-
-
-
-
-	//dezigzag
-	printf("Applying deZigZag...\n");
-	YAfterDCT = deZigZagImage(Yzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
-	CbAfterDCT = deZigZagImage(Cbzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
-	CrAfterDCT = deZigZagImage(Crzz, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
-
-
-	printf("Applying IDCT to BGR Components...\n");
-	Y = IDCTImage(YAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	Cb = IDCTImage(CbAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-	Cr = IDCTImage(CrAfterDCT, infoHeader.biWidth, infoHeader.biHeight);
-
-	printf("Applying YCbCr --> RGB Conversion\n");
-	YCbCr2RGB(Y, Cb, Cr,  infoHeader.biHeight, infoHeader.biWidth, R, G, B);
-
-
-	// Escreve output
-	printf("Writing output file to disk...\n");
-	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
-	
-
-
-	// Liberacao de Memoria
-
-	freeVetorEncoded(Y_rle, zigzag_len);
-	freeVetorEncoded(Cb_rle, zigzag_len);
-	freeVetorEncoded(Cr_rle, zigzag_len);
-
-
-
-	// Liberacao dos vetores do zizag
-  // int i;
-	for(i = 0; i < zigzag_len; i++){
-		free(Yzz[i]);
-		free(Cbzz[i]);
-		free(Crzz[i]);
-	}
-
-	//Liberacao dos vetores quantizados
-	// freeDoubleMatrix(YQuantized, infoHeader.biHeight);
-	// freeDoubleMatrix(CbQuantized, infoHeader.biHeight);
-	// freeDoubleMatrix(CrQuantized, infoHeader.biHeight);
-
-	// Liberacao dos vetores pos-DCT
-	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);
-	freeDoubleMatrix(CbAfterDCT, infoHeader.biHeight);
-	freeDoubleMatrix(CrAfterDCT, infoHeader.biHeight);
-
+	// Liberacao de memoria do descompressor
 	// Liberacao dos componentes YCbCr
 	freeDoubleMatrix(Y, infoHeader.biHeight);
 	freeDoubleMatrix(Cb, infoHeader.biHeight);
@@ -169,7 +106,99 @@ int main(int argc, char *argv[]){
 	liberaMatrizUnChar(G,infoHeader.biHeight);
 	liberaMatrizUnChar(B,infoHeader.biHeight);
 
+
+	//Liberacao dos vetores quantizados
+	freeDoubleMatrix(YQuant, infoHeader.biHeight);
+	freeDoubleMatrix(CbQuant, infoHeader.biHeight);
+	freeDoubleMatrix(CrQuant, infoHeader.biHeight);
+
+	// Liberacao dos vetores pos-DCT
+	freeDoubleMatrix(YAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CbAfterDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CrAfterDCT, infoHeader.biHeight);
+
+	freeDoubleMatrix(Yzz, Yzz_len);
+	freeDoubleMatrix(Cbzz, Cbzz_len);
+	freeDoubleMatrix(Crzz, Crzz_len);
+
+	freeVetorEncoded(Y_rle, Yzz_len);
+	freeVetorEncoded(Cb_rle, Cbzz_len);
+	freeVetorEncoded(Cr_rle, Crzz_len);
+
 	fclose(f);
+
+	//Essa parte fica no descompressor --------------------------------------------------------
+	// setup para leitura do arquivo:
+	f = NULL;
+	ENCODED_IMAGE **Y_in = NULL, **Cb_in = NULL, **Cr_in = NULL;
+
+	readENCODEDFile(f, &fileHeader, &infoHeader, Y_in, Cb_in, Cr_in);
+
+	// decode
+	int zigzag_len = ((infoHeader.biWidth * infoHeader.biHeight)/(8*8));
+
+	printf("Decoding matrixes into ZigZag Array...\n");
+	double **Yzz_in = decodeImage(Y_in, zigzag_len);
+	double **Cbzz_in = decodeImage(Cb_in, zigzag_len);
+	double **Crzz_in = decodeImage(Cr_in, zigzag_len);
+
+
+
+
+	//dezigzag
+	printf("Applying deZigZag...\n");
+	double **YAfterdeZZ_in = deZigZagImage(Yzz_in, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
+	double **CbAfterdeZZ_in = deZigZagImage(Cbzz_in, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
+	double **CrAfterdeZZ_in = deZigZagImage(Crzz_in, zigzag_len, infoHeader.biWidth, infoHeader.biHeight);
+
+
+	printf("Applying IDCT to YCbCr Components...\n");
+	double **YAfterIDCT = IDCTImage(YAfterdeZZ_in, infoHeader.biWidth, infoHeader.biHeight);
+	double **CbAfterIDCT = IDCTImage(CbAfterdeZZ_in, infoHeader.biWidth, infoHeader.biHeight);
+	double **CrAfterIDCT = IDCTImage(CrAfterdeZZ_in, infoHeader.biWidth, infoHeader.biHeight);
+
+	printf("Applying YCbCr --> RGB Conversion\n");
+	
+	unsigned char **B_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
+	unsigned char **G_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
+	unsigned char **R_in = alocaMatrizUnChar(infoHeader.biHeight, infoHeader.biWidth);
+	
+	YCbCr2RGB(YAfterIDCT, CbAfterIDCT, CrAfterIDCT,  infoHeader.biHeight, infoHeader.biWidth, R_in, G_in, B_in);
+
+
+	// Escreve output
+	printf("Writing output file to disk...\n");
+	writeBMPFile(B, G, R, &fileHeader, &infoHeader);
+	
+
+
+	// Liberacao de Memoria
+
+	
+
+	freeVetorEncoded(Y_in, zigzag_len);
+	freeVetorEncoded(Cb_in, zigzag_len);
+	freeVetorEncoded(Cr_in, zigzag_len);
+
+
+
+	freeDoubleMatrix(Yzz_in, zigzag_len);
+	freeDoubleMatrix(Cbzz_in, zigzag_len);
+	freeDoubleMatrix(Crzz_in, zigzag_len);
+
+	freeDoubleMatrix(YAfterdeZZ_in, infoHeader.biHeight);
+	freeDoubleMatrix(CbAfterdeZZ_in, infoHeader.biHeight);
+	freeDoubleMatrix(CrAfterdeZZ_in, infoHeader.biHeight);
+
+	freeDoubleMatrix(YAfterIDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CbAfterIDCT, infoHeader.biHeight);
+	freeDoubleMatrix(CrAfterIDCT, infoHeader.biHeight);
+
+	liberaMatrizUnChar(R_in,infoHeader.biHeight);
+	liberaMatrizUnChar(G_in,infoHeader.biHeight);
+	liberaMatrizUnChar(B_in,infoHeader.biHeight);
+
+	// fclose(f);
 	
 	return 0;
 }

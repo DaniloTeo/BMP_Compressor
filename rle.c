@@ -88,7 +88,7 @@ ENCODED_IMAGE * encodeRLE(double *vet, int n){
 
 ENCODED_IMAGE **encodeImage(double **img, int length){
 	int i;
-	int maxDimension = 4;
+	int maxDimension = 8;
 	ENCODED_IMAGE **output = (ENCODED_IMAGE **) malloc(sizeof(ENCODED_IMAGE *) * length);
 
 	for(i = 0; i < length; i++){
@@ -103,12 +103,14 @@ double * decodeRLE(ENCODED_IMAGE *input){
 	int i,j = 0;
 	int decomp_len = 0;
 	//descobir o tamanho do vetor original
+	printf("106");
 	for(i = 0; i < input->len; i++){
 		decomp_len += input->qtds[i];
 	}
-
+	printf("110");
 	double *output = (double *) malloc(sizeof(double) * decomp_len);
 
+	printf("113");
 	for(i = 0; i < input->len; i++){
 		while(input->qtds[i] > 0){
 			output[j] = (double)input->info[i];
@@ -116,6 +118,7 @@ double * decodeRLE(ENCODED_IMAGE *input){
 			j++;
 		}
 	}
+	printf("121");
 
 	return output;
 }
@@ -123,91 +126,123 @@ double * decodeRLE(ENCODED_IMAGE *input){
 
 double **decodeImage(ENCODED_IMAGE **encoded, int length){
 	int i;
+	printf("length: %d\n", length);
 	double **out = (double **) malloc(sizeof(double *) * length);
-	
+	if(out == NULL) printf("aaaaaaaaaaaaaaaaaaah\n\n");
 	for(i = 0; i < length; i++){
-		// printVetorInt(encoded[i]->qtds, encoded[i]->len);
+		printf("133");
 		out[i] = decodeRLE(encoded[i]);
 	}
 
 	return out;
 }
 
+void RLE2File(ENCODED_IMAGE ** img, int len, FILE *buffer){
+	int i;
+	// percorre o vetor de ENCODED_IMAGE* 
+	for(i = 0; i < len; i++){
+		fwrite(&(img[i]->len),sizeof(int), 1, buffer);
+		fwrite(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		fwrite(img[i]->info, sizeof(int) ,img[i]->len, buffer);	
+	}
+}
+
+ENCODED_IMAGE ** File2RLE(FILE *buffer, int len){
+	int i;
+	ENCODED_IMAGE **img = (ENCODED_IMAGE **) malloc(len * sizeof(ENCODED_IMAGE *));
 
 
-// int main(void){
-// 	// char string[] = "wwwwaaadexxxxxxywww";
-// 	int i, j;
-// 	int width = 8, height = 8;
-// 	srand(time(NULL));
+	for(i = 0; i < len; i++){
+		img[i] = initializeEncoded();
+		fread(&(img[i]->len),sizeof(int), 1, buffer);
+
+		img[i]->info = (int *) malloc(img[i]->len * sizeof(int));
+		img[i]->qtds = (int *) malloc(img[i]->len * sizeof(int));
+
+		fread(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		fread(img[i]->info, sizeof(int) ,img[i]->len, buffer);	
+	}
+
+	return img;
+}
 
 
 
-// 	double **test = (double **) malloc(sizeof(double *) * height);
 
-// 	for(i = 0; i < height; i++){
-// 		test[i] = (double *) malloc(sizeof(double) * width);
-// 		for(j = 0; j < width; j++){
-// 			test[i][j] = (double) (rand() % 3);
-// 			// printf("%.2lf ", test[i][j]);
-// 		}
-// 		// printf("\n");
-// 	}
-
-// 	int n_vet = 0;
-// 	printf("ZIGZAGGED IMAGE--------------------\n");
-// 	double **jorge = zigzagImage(test, width, height, &n_vet);
-
-// 	for(i = 0; i < n_vet; i++){
-// 		for(j = 0; j < (4*4); j++){
-// 			printf("%.2lf ", jorge[i][j]);
-// 		}
-// 		printf("\n");
-// 	}
-// 	printf("\n\n");
+/*
+int main(void){
+	// char string[] = "wwwwaaadexxxxxxywww";
+	int i, j;
+	int width = 8, height = 8;
+	srand(time(NULL));
 
 
-// 	printf("n_vet: %d\n", n_vet);
 
-// 	ENCODED_IMAGE **out = encodeImage(jorge, n_vet);
+	double **test = (double **) malloc(sizeof(double *) * height);
 
-// 	printf("ENCODED-----------------------\n");	
-// 	for(i = 0; i < n_vet; i++){
-// 		printf("ITERAÇÃO: %d\n", i);
-// 		printVetorInt(out[i]->info, out[i]->len);
-// 		printVetorInt(out[i]->qtds, out[i]->len);
-// 		printf("\n");
+	for(i = 0; i < height; i++){
+		test[i] = (double *) malloc(sizeof(double) * width);
+		for(j = 0; j < width; j++){
+			test[i][j] = (double) (rand() % 3);
+			printf("%.2lf ", test[i][j]);
+		}
+		printf("\n");
+	}
+
+	int n_vet = 0;
+	printf("ZIGZAGGED IMAGE--------------------\n");
+	double **jorge = zigzagImage(test, width, height, &n_vet);
+
+	for(i = 0; i < n_vet; i++){
+		for(j = 0; j < (4*4); j++){
+			printf("%.2lf ", jorge[i][j]);
+		}
+		printf("\n");
+	}
+	printf("\n\n");
+
+
+	printf("n_vet: %d\n", n_vet);
+
+	ENCODED_IMAGE **out = encodeImage(jorge, n_vet);
+
+	printf("ENCODED-----------------------\n");	
+	for(i = 0; i < n_vet; i++){
+		printf("ITERAÇÃO: %d\n", i);
+		printVetorInt(out[i]->info, out[i]->len);
+		printVetorInt(out[i]->qtds, out[i]->len);
+		printf("\n");
 		
-// 	}
+	}
 
 
-// 	printf("DECODED-----------------------\n");
-// 	double ** decoded = decodeImage(out, n_vet);
-// 	printf("SAIU\n");
-// 	for(i = 0; i < n_vet; i++){
-// 		for(j = 0; j < (4*4); j++){
-// 			if(decoded[i][j] != jorge[i][j]){
-// 				printf("ALGO DEU ERRADO!!\n");
-// 				break;
-// 			}
-// 		}
-// 	}
-// 	if(i == n_vet) printf("TUDO CERTO\n");;
+	printf("DECODED-----------------------\n");
+	double ** decoded = decodeImage(out, n_vet);
+	printf("SAIU\n");
+	for(i = 0; i < n_vet; i++){
+		for(j = 0; j < (4*4); j++){
+			if(decoded[i][j] != jorge[i][j]){
+				printf("ALGO DEU ERRADO!!\n");
+				break;
+			}
+		}
+	}
+	if(i == n_vet) printf("TUDO CERTO\n");;
 
 
-// 	for(i = 0; i < height; i++){
-// 		free(test[i]);
-// 	}
+	for(i = 0; i < height; i++){
+		free(test[i]);
+	}
 
-// 	for(i = 0; i < n_vet; i++){
-// 		free(decoded[i]);
-// 		freeEncoded(out[i]);
-// 	}
+	for(i = 0; i < n_vet; i++){
+		free(decoded[i]);
+		freeEncoded(out[i]);
+	}
 
-// 	free(decoded);
-// 	free(out);
-// 	free(test);
-	
-// 	return 0;
+	free(decoded);
+	free(out);
+	free(test);
+	free(jorge);
+	return 0;
 
-// }
+}*/

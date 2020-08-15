@@ -75,34 +75,41 @@ void dumpInfoHeader(BMPINFOHEADER *h){
 }
 void writeENCODEDFile(BMPFILEHEADER *fileHeader, ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE **Cr, BMPINFOHEADER *infoHeader){
   int i = 0;
-  	printf("bitmap:79\n");
+  int length = (infoHeader->biHeight * infoHeader->biWidth) / (8*8);
+	printf("Opening output file...\n");
 	FILE *out = fopen("out.xbl", "wb");
-	printf("bitmap:81\n");
+	printf("Writing fileHeader to disk...\n");
 	writeBMPFileHeader(out, fileHeader);
+	printf("Writing infoHeader to disk...\n");
 	writeBMPInfoHeader(out, infoHeader);
-  printf("bitmap:84\n");
-  printf("ftell(out): %d\n",(int)ftell(out));
-  EI2File(Y, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:86\n");
-  EI2File(Cb, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:88\n");
-  EI2File(Cr, out, (infoHeader->biHeight * infoHeader->biWidth) / (8*8));
-  printf("bitmap:90\n");
+	printf("Writing Y matrix to disk...\n");
+  RLE2File(Y,length, out);
+	printf("Writing Cb matrix to disk...\n");
+  RLE2File(Cb,length, out);
+	printf("Writing Cr matrix to disk...\n");
+  RLE2File(Cr,length, out);
 
   fclose(out);
 }
 
 void readENCODEDFile(FILE *F, BMPFILEHEADER *H, BMPINFOHEADER *I , ENCODED_IMAGE **Y, ENCODED_IMAGE **Cb, ENCODED_IMAGE**Cr) {
+  printf("Opening input file...\n");
   F = fopen("out.xbl", "rb");
-  leituraFileHeader(F, H);
+  	printf("Reading fileHeader...\n");
+leituraFileHeader(F, H);
+  	printf("Reading infoHeader...\n");
   leituraInfoHeader(F, I);
   int nOfRLEs = (I->biHeight * I->biWidth) / (8*8);
 
-  File2EI(Y, F, nOfRLEs);
-  File2EI(Cb, F, nOfRLEs);
-  File2EI(Cr, F, nOfRLEs);
+  	printf("Reading Y matrix from disk...\n");
+  Y = File2RLE(F, nOfRLEs);
+  	printf("Reading Cb matrix from disk...\n");
+  Cb = File2RLE(F, nOfRLEs);
+  	printf("Reading Cr matrix from disk...\n");
+  Cr = File2RLE(F, nOfRLEs);
 
 
+	printf("File read from disk!!\n");
   fclose(F);
 }
 

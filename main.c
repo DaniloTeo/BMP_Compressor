@@ -68,11 +68,16 @@ int main(int argc, char *argv[]){
   	printf("Writing binary file....\n");
   	writeENCODEDFile(&fileHeader, Y_rle, Cb_rle, Cr_rle, &infoHeader);
 
-	// Liberacao de memoria do descompressor
+	// Liberacao de memoria do compressor
 	// Liberacao dos componentes YCbCr
 	freeDoubleMatrix(Y, infoHeader.biHeight);
 	freeDoubleMatrix(Cb, infoHeader.biHeight);
 	freeDoubleMatrix(Cr, infoHeader.biHeight);
+
+	freeDoubleMatrix(YQuant, infoHeader.biHeight);
+	freeDoubleMatrix(CbQuant, infoHeader.biHeight);
+	freeDoubleMatrix(CrQuant, infoHeader.biHeight);
+
 
 	//Liberacao dos componentes RGB
 	liberaMatrizUnChar(R,infoHeader.biHeight);

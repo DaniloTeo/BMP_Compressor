@@ -93,5 +93,6 @@ double **decodeImage(ENCODED_IMAGE **encoded, int length);
 
 void RLE2File(ENCODED_IMAGE ** img, int len, FILE *buffer);
 ENCODED_IMAGE ** File2RLE(FILE *buffer, int len);
+int testQtds(ENCODED_IMAGE * t, double limit);
 
 #endif

@@ -6,6 +6,10 @@
 #include "zigzag.h"
 #include "rle.h"
 
+#define WRITE 1
+#define IGNORE 0
+#define LIMIT 0.0
+
 ENCODED_IMAGE *initializeEncoded(void){
 	ENCODED_IMAGE *img = (ENCODED_IMAGE *) malloc(sizeof(ENCODED_IMAGE));
 	img->info = NULL;
@@ -53,6 +57,19 @@ void printVetorDouble(double *vet, int n){
 	printf("\n");
 }
 
+int testQtds(ENCODED_IMAGE * t, double limit){
+	int countOnes = 0;
+	int i;
+
+	for(i = 0; i < t->len; i++){
+		if(t->qtds[i] == 1) countOnes++;
+	}
+
+	double ratio = (double)countOnes / (double)t->len;
+
+	if(ratio < limit) {printf("WRITE\n");return WRITE;}
+	else {printf("IGNORE\n");return IGNORE;}
+}
 
 ENCODED_IMAGE * encodeRLE(double *vet, int n){
 	int i, count;
@@ -83,6 +100,11 @@ ENCODED_IMAGE * encodeRLE(double *vet, int n){
 	
 	out->qtds = (int *) realloc(out->qtds, sizeof(int) * (out->len));
 
+	if(!testQtds(out, LIMIT)){
+		free(out->qtds);
+		out->qtds = NULL;
+	}
+
 	return out;
 }
 
@@ -92,9 +114,11 @@ ENCODED_IMAGE **encodeImage(double **img, int length){
 	ENCODED_IMAGE **output = (ENCODED_IMAGE **) malloc(sizeof(ENCODED_IMAGE *) * length);
 
 	for(i = 0; i < length; i++){
-
+		printf("[%d]: ", i);
 		output[i] = encodeRLE(img[i], (maxDimension*maxDimension));
+		printf("\n");
 	}
+
 
 	return output;
 }
@@ -103,8 +127,18 @@ double * decodeRLE(ENCODED_IMAGE *input){
 	int i,j = 0;
 	int decomp_len = 0;
 	//descobir o tamanho do vetor original
-	for(i = 0; i < input->len; i++){
-		decomp_len += input->qtds[i];
+	if(input->qtds != NULL){
+		for(i = 0; i < input->len; i++){
+			decomp_len += input->qtds[i];
+		}
+	}
+	else{
+		decomp_len = input->len;
+		input->qtds = (int *) malloc(input->len * sizeof(int));
+		for(i = 0; i < input->len; i++){
+			input->qtds[i] = 1;
+		}
+
 	}
 	double *output = (double *) malloc(sizeof(double) * decomp_len);
 
@@ -131,28 +165,43 @@ double **decodeImage(ENCODED_IMAGE **encoded, int length){
 }
 
 void RLE2File(ENCODED_IMAGE ** img, int len, FILE *buffer){
-	int i;
+	int i, writeIgnore;
+
 	// percorre o vetor de ENCODED_IMAGE* 
 	for(i = 0; i < len; i++){
 		fwrite(&(img[i]->len),sizeof(int), 1, buffer);
-		fwrite(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		// fwrite(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		if(img[i]->qtds == NULL) {
+			writeIgnore = IGNORE;
+			fwrite(&writeIgnore, sizeof(int), 1, buffer);
+		}			
+		else {
+			writeIgnore = WRITE;
+			fwrite(&writeIgnore, sizeof(int), 1, buffer);
+			fwrite(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);	
+						
+		}
+
+		
 		fwrite(img[i]->info, sizeof(int) ,img[i]->len, buffer);	
 	}
 }
 
 ENCODED_IMAGE ** File2RLE(FILE *buffer, int len){
-	int i;
+	int i, writeIgnore;
 	ENCODED_IMAGE **img = (ENCODED_IMAGE **) malloc(len * sizeof(ENCODED_IMAGE *));
 
 
 	for(i = 0; i < len; i++){
 		img[i] = initializeEncoded();
 		fread(&(img[i]->len),sizeof(int), 1, buffer);
-		// printf("img[%d]->len: %d\n", i, img[i]->len);
-		img[i]->info = (int *) malloc(img[i]->len * sizeof(int));
-		img[i]->qtds = (int *) malloc(img[i]->len * sizeof(int));
+		fread(&(writeIgnore),sizeof(int), 1, buffer);
+		if(writeIgnore == WRITE){
+			img[i]->qtds = (int *) malloc(img[i]->len * sizeof(int));
+			fread(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		}
 
-		fread(img[i]->qtds, sizeof(int) ,img[i]->len, buffer);
+		img[i]->info = (int *) malloc(img[i]->len * sizeof(int));
 		fread(img[i]->info, sizeof(int) ,img[i]->len, buffer);	
 	}
 
